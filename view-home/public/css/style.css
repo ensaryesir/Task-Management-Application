@@ -248,7 +248,7 @@ blockquote {
                                 Loader
 -----------------------------------------------------------------------*/
 #loading {
-  background-color: #eee;
+  background-color: #F8F7F7;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -262,9 +262,12 @@ blockquote {
 }
 
 #loading-center {
+  background: url(../images/logo.svg) no-repeat scroll center center;
+  background-size: 20%;
   width: 100%;
   height: 100%;
   position: relative;
+  animation: loader 1.5s alternate infinite ease-in-out;
 }
 
 .loader {
