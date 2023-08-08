@@ -671,7 +671,12 @@
               />
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-              <form onsubmit="return validateForm()">
+              <form
+                onsubmit="return validateForm()"
+                id="registrationForm"
+                action="/register"
+                method="POST"
+              >
                 <img
                   src="../public-home/images/color-customizer/color-1.png"
                   class="img-fluid mb-4"
@@ -683,6 +688,7 @@
                     type="email"
                     id="form1Example13"
                     class="form-control form-control-lg"
+                    name="email"
                     required
                   />
                   <label class="form-label" for="form1Example13"
@@ -696,6 +702,7 @@
                     type="password"
                     id="form1Example23"
                     class="form-control form-control-lg"
+                    name="password"
                     required
                   />
                   <label class="form-label" for="form1Example23"
@@ -709,6 +716,7 @@
                     type="password"
                     id="form1Example24"
                     class="form-control form-control-lg"
+                    name="confirmPassword"
                     required
                   />
                   <label class="form-label" for="form1Example24"
@@ -1093,8 +1101,19 @@
           alert("Please agree to the Terms before signing up.");
           return false;
         }
+
+        const password = document.getElementById("form1Example23").value;
+        const confirmPassword = document.getElementById("form1Example24").value;
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+          return false;
+        }
+
+        return true; // Formun gönderilmesine izin ver
       }
     </script>
+
     <!-- JavaScript End -->
   </body>
 </html>

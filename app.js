@@ -59,6 +59,12 @@ app.use("/", router);
 const homeRouter = require("./app-server/routes/home-router");
 app.use("/", homeRouter);
 
+const indexRouter = require("./app-server/routes/main-page-router");
+app.use("/", indexRouter);
+
+const authRouter = require("./app-server/routes/auth-router");
+app.use("/", authRouter);
+
 //Accessing the Public folder (this process is called mapping)
 //(app-server/views/view-app/public)
 app.use("/public-app", express.static(path.join(__dirname, "app-server", "views", "view-app", "public-app")));

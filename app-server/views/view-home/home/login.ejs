@@ -18,7 +18,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../public-home/css/bootstrap.min.css" />
     <!-- owl-carousel -->
-    <link rel="stylesheet" href="../public-home/css/owl-carousel/owl.carousel.css" />
+    <link
+      rel="stylesheet"
+      href="../public-home/css/owl-carousel/owl.carousel.css"
+    />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../public-home/css/font-awesome.css" />
     <!-- Magnific Popup -->
@@ -392,7 +395,7 @@
               />
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-              <form>
+              <form id="loginForm" action="/login" method="POST">
                 <img
                   src="../public-home/images/color-customizer/color-1.png"
                   class="img-fluid mb-4"
@@ -404,6 +407,8 @@
                     type="email"
                     id="form1Example13"
                     class="form-control form-control-lg"
+                    name="email"
+                    required
                   />
                   <label class="form-label" for="form1Example13"
                     >Email address</label
@@ -416,6 +421,8 @@
                     type="password"
                     id="form1Example23"
                     class="form-control form-control-lg"
+                    name="password"
+                    required
                   />
                   <label class="form-label" for="form1Example23"
                     >Password</label
