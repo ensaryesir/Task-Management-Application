@@ -4,23 +4,20 @@ const app = express();
 const path = require("path");
 const ejsLayouts = require("express-ejs-layouts");
 const bodyParser = require("body-parser");
-
 //Cookie and Session Handling
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-
 //Database Operations
 const mongoose = require("mongoose");
-
 //Method Override
 const methodOverride = require("method-override");
-
 //JWT and Web Push
 const jwt = require("jsonwebtoken");
 const webpush = require('web-push');
-
 //Notifications
 const Notification = require('node-notifier');
+
+
 
 // Local MongoDb connection
 mongoose

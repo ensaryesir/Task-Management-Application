@@ -1,6 +1,7 @@
 const AuthModel = require("../models/auth-model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const nodemailer = require("nodemailer");
 
 function generateJWT(user) {
   const secretKey = "secretKey"; // Set a secure key
@@ -88,5 +89,70 @@ exports.logoutUser = (req, res) => {
   } else {
     //res.status(401).json({ error: "Unauthorized access." });
     res.redirect("/login");
+  }
+};
+
+exports.showForgotPasswordPage = (req, res) => {
+  res.render("view-home/home/forgot-password");
+};
+
+function generateResetToken() {
+  const tokenLength = 32; // Token uzunluğu (karakter sayısı)
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  let token = "";
+  for (let i = 0; i < tokenLength; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    token += characters.charAt(randomIndex);
+  }
+
+  return token;
+}
+
+// Create a transporter using the default SMTP transport
+const transporter = nodemailer.createTransport({
+  service: "Gmail", // E-posta sağlayıcınıza uygun bir değer girin (örneğin "Gmail")
+  auth: {
+    user: "workstack.info@gmail.com", // Gönderici e-posta adresi
+    pass: "$8f(9EBnM#:5{[@N", // Gönderici e-posta adresinin şifresi
+  },
+});
+
+exports.forgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    // Generate a reset token and save it to the user's record in the database
+    const resetToken = generateResetToken(); // Burada reset token üretme mantığını kullanmalısınız
+
+    // Construct the reset link
+    const resetLink = `http://localhost:7000/reset-password=${resetToken}`;
+    console.log("Generated Reset Token:", resetToken);
+
+    // Send the password reset email
+    const mailOptions = {
+      from: "workstack.info@gmail.com", // Gönderici e-posta adresi
+      to: email, // Alıcı e-posta adresi
+      subject: "Password Reset", // E-posta konusu
+      text: `To reset your password, click the following link: ${resetLink}`, // E-posta içeriği
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error("Error sending email:", error);
+        res
+          .status(500)
+          .json({ error: "An error occurred while sending the email." });
+      } else {
+        console.log("Password reset email sent:", info.response);
+        res
+          .status(200)
+          .json({ message: "Password reset email sent successfully." });
+      }
+    });
+  } catch (err) {
+    console.error("Error during password reset:", err);
+    res.status(500).json({ error: "An error occurred during password reset." });
   }
 };

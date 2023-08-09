@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controller/auth-controller");
+const authController = require("../controller/auth-controller");
 
 function authenticateToken(req, res, next) {
   const token = req.cookies.token; // We receive the token from the cookie
@@ -32,7 +32,11 @@ function checkUserSession(req, res, next) {
   }
 }
 
-router.post("/login", controller.userLogin);
-router.post("/register", controller.userRegister);
+router.post("/login", authController.userLogin);
+
+router.get("/forgot-password", authController.showForgotPasswordPage);
+router.post("/forgot-password", authController.forgotPassword);
+
+router.post("/register", authController.userRegister);
 
 module.exports = router;
