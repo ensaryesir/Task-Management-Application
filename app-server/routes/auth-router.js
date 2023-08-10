@@ -34,8 +34,9 @@ function checkUserSession(req, res, next) {
 
 router.post("/login", authController.userLogin);
 
-router.get("/forgot-password", authController.showForgotPasswordPage);
 router.post("/forgot-password", authController.forgotPassword);
+
+router.post("/reset-password", authController.resetPassword);
 
 router.post("/register", authController.userRegister);
 

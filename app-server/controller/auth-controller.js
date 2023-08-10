@@ -2,6 +2,8 @@ const AuthModel = require("../models/auth-model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
+const crypto = require("crypto");
+const saltRounds = 10;
 
 function generateJWT(user) {
   const secretKey = "secretKey"; // Set a secure key
@@ -92,10 +94,6 @@ exports.logoutUser = (req, res) => {
   }
 };
 
-exports.showForgotPasswordPage = (req, res) => {
-  res.render("view-home/home/forgot-password");
-};
-
 function generateResetToken() {
   const tokenLength = 32; // Token uzunluğu (karakter sayısı)
   const characters =
@@ -110,47 +108,102 @@ function generateResetToken() {
   return token;
 }
 
-// Create a transporter using the default SMTP transport
-const transporter = nodemailer.createTransport({
-  service: "Gmail", // E-posta sağlayıcınıza uygun bir değer girin (örneğin "Gmail")
-  auth: {
-    user: "workstack.info@gmail.com", // Gönderici e-posta adresi
-    pass: "$8f(9EBnM#:5{[@N", // Gönderici e-posta adresinin şifresi
-  },
-});
+function sendPasswordResetEmail(email, token) {
+  const transporter = nodemailer.createTransport({
+    service: "Gmail", // E.g., "Gmail"
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "workstack.info1@gmail.com",
+      pass: "gnvclhhuasqdtsmf",
+    },
+  });
+
+  const mailOptions = {
+    from: "workstack.info1@gmail.com",
+    to: email,
+    subject: "Password Reset for '" + email + "'",
+    text: `To reset your password, click the following link: http://localhost:7000/reset-password?token=${token}`,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error("Error sending email:", error);
+    } else {
+      console.log("Password reset email sent:", info.response);
+    }
+  });
+}
 
 exports.forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
 
-    // Generate a reset token and save it to the user's record in the database
-    const resetToken = generateResetToken(); // Burada reset token üretme mantığını kullanmalısınız
+    // Generate a reset token
+    const resetToken = crypto.randomBytes(20).toString("hex");
 
-    // Construct the reset link
-    const resetLink = `http://localhost:7000/reset-password=${resetToken}`;
-    console.log("Generated Reset Token:", resetToken);
+    // Find the user by email
+    const user = await AuthModel.findOne({ email });
+
+    if (!user) {
+      return res.status(400).json({ error: "User not found." });
+    }
+
+    // Update the resetToken field
+    user.resetToken = resetToken;
+    // Örneğin, forgotPassword fonksiyonunda:
+    req.session.resetEmail = email;
+
+    await user.save();
 
     // Send the password reset email
-    const mailOptions = {
-      from: "workstack.info@gmail.com", // Gönderici e-posta adresi
-      to: email, // Alıcı e-posta adresi
-      subject: "Password Reset", // E-posta konusu
-      text: `To reset your password, click the following link: ${resetLink}`, // E-posta içeriği
-    };
+    sendPasswordResetEmail(email, resetToken);
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error("Error sending email:", error);
-        res
-          .status(500)
-          .json({ error: "An error occurred while sending the email." });
-      } else {
-        console.log("Password reset email sent:", info.response);
-        res
-          .status(200)
-          .json({ message: "Password reset email sent successfully." });
-      }
-    });
+    res.send("Password reset link sent to your email.");
+  } catch (err) {
+    console.error("Error during password reset:", err);
+    res.status(500).json({ error: "An error occurred during password reset." });
+  }
+};
+
+exports.resetPassword = async (req, res) => {
+  try {
+    const { token, password, confirmPassword, email } = req.body;
+
+    // Eğer email yoksa hata dön
+    if (!email) {
+      return res.status(400).json({ error: "Invalid email." });
+    }
+
+    // Kullanıcıyı email ile veritabanında bul
+    const user = await AuthModel.findOne({ email, resetToken: token });
+
+    // Eğer kullanıcı bulunamazsa hata dön
+    if (!user) {
+      return res.status(400).json({ error: "Invalid email or token." });
+    }
+
+    // Şifreleme işlemine geçmeden önce gelen veriyi kontrol et
+    if (
+      !password ||
+      typeof password !== "string" ||
+      password !== confirmPassword
+    ) {
+      return res.status(400).json({ error: "Invalid passwords." });
+    }
+
+    // Yeni şifre şifreleme ve güncelleme
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+    user.password = hashedPassword;
+    user.resetToken = null; // Tokeni kullanıldı olarak işaretle
+
+    await user.save();
+
+    // Oturum verisini ayarla (örneğin, "resetEmail" adında)
+    req.session.resetEmail = email; // Formdan gelen email değerini kullan
+
+    res.redirect("/login");
   } catch (err) {
     console.error("Error during password reset:", err);
     res.status(500).json({ error: "An error occurred during password reset." });
