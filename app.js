@@ -13,11 +13,9 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 //JWT and Web Push
 const jwt = require("jsonwebtoken");
-const webpush = require('web-push');
+const webpush = require("web-push");
 //Notifications
-const Notification = require('node-notifier');
-
-
+const Notification = require("node-notifier");
 
 // Local MongoDb connection
 mongoose
@@ -62,19 +60,37 @@ app.use("/", indexRouter);
 const authRouter = require("./app-server/routes/auth-router");
 app.use("/", authRouter);
 
+const userRouter = require("./app-server/routes/user-operations-router");
+app.use("/", userRouter);
+
 //Accessing the Public folder (this process is called mapping)
 //(app-server/views/view-app/public)
-app.use("/public-app", express.static(path.join(__dirname, "app-server", "views", "view-app", "public-app")));
+app.use(
+  "/public-app",
+  express.static(
+    path.join(__dirname, "app-server", "views", "view-app", "public-app")
+  )
+);
 //(app-server/views/view-home/public)
-app.use("/public-home", express.static(path.join(__dirname, "app-server", "views", "view-home", "public-home")));
+app.use(
+  "/public-home",
+  express.static(
+    path.join(__dirname, "app-server", "views", "view-home", "public-home")
+  )
+);
 
 app.use(methodOverride("_method"));
 
-const publicVapidKey = 'BMYo01tmY4u3KYkOr_uR_NdonUF_1wafEzVc1CUBizk589YzG9K4hmeEiJG7J-zGwA4suxstRTz7rMrWCUP84AQ';
-const privateVapidKey = 'EJbDcDJSTfF8jJd5dtc_ihAwYa_MqhgpBsbmctATFFw';
+const publicVapidKey =
+  "BMYo01tmY4u3KYkOr_uR_NdonUF_1wafEzVc1CUBizk589YzG9K4hmeEiJG7J-zGwA4suxstRTz7rMrWCUP84AQ";
+const privateVapidKey = "EJbDcDJSTfF8jJd5dtc_ihAwYa_MqhgpBsbmctATFFw";
 
 //Setting vapid keys details
-webpush.setVapidDetails('mailto:yesirensar@gmail.com', publicVapidKey,privateVapidKey);
+webpush.setVapidDetails(
+  "mailto:yesirensar@gmail.com",
+  publicVapidKey,
+  privateVapidKey
+);
 
 const port = 7000;
 app.listen(port, () => {
