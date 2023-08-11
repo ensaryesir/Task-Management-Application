@@ -20,7 +20,6 @@
       rel="stylesheet"
       href="../public-app/vendor/remixicon/fonts/remixicon.css"
     />
-
     <link
       rel="stylesheet"
       href="../public-app/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css"
@@ -34,14 +33,17 @@
       href="../public-app/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css"
     />
   </head>
+
   <body class="  ">
-    <!-- loader Start -->
+    <!-- Loader Start -->
     <div id="loading">
       <div id="loading-center"></div>
     </div>
-    <!-- loader END -->
+    <!-- Loader End -->
+
     <!-- Wrapper Start -->
     <div class="wrapper">
+      <!-- Sidebar -->
       <div class="iq-sidebar sidebar-default">
         <div class="iq-sidebar-logo d-flex align-items-center">
           <a href="/index" class="header-logo">
@@ -140,29 +142,6 @@
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
                   <span class="ml-4">Employees</span>
-                </a>
-              </li>
-              <li class="">
-                <a href="/desk" class="svg-icon">
-                  <svg
-                    class="svg-icon"
-                    width="25"
-                    height="25"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                    ></path>
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                  </svg>
-                  <span class="ml-4">Desk</span>
                 </a>
               </li>
               <li class="">
@@ -282,74 +261,8 @@
                       </li>
                     </ul>
                   </li>
-
-                  <li class=" ">
-                    <a
-                      href="#pricing"
-                      class="collapsed"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        class="svg-icon"
-                        id="p-dash16"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                      </svg>
-                      <span class="ml-4">Pricing</span>
-                      <i
-                        class="las la-angle-right iq-arrow-right arrow-active"
-                      ></i>
-                      <i
-                        class="las la-angle-down iq-arrow-right arrow-hover"
-                      ></i>
-                    </a>
-                    <ul
-                      id="pricing"
-                      class="iq-submenu collapse"
-                      data-parent="#otherpage"
-                    >
-                      <li class="">
-                        <a href="/pricing">
-                          <i class="las la-minus"></i><span>Pricing 1</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
                   <li class="">
-                    <a href="/timeline" class="svg-icon">
-                      <svg
-                        class="svg-icon"
-                        id="p-dash016"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      <span class="ml-4">Timeline</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="/invoice" class="svg-icon">
+                    <a href="/faq" class="svg-icon">
                       <svg
                         class="svg-icon"
                         id="p-dash07"
@@ -371,13 +284,14 @@
                         <line x1="16" y1="17" x2="8" y2="17"></line>
                         <polyline points="10 9 9 9 8 9"></polyline>
                       </svg>
-                      <span class="ml-4">Invoice</span>
+                      <span class="ml-4">Faqs</span>
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
           </nav>
+
           <div id="sidebar-bottom" class="position-relative sidebar-bottom">
             <div class="card border-none mb-0 shadow-none">
               <div class="card-body p-0">
@@ -418,7 +332,6 @@
               </div>
             </div>
           </div>
-          <div class="pt-5 pb-2"></div>
         </div>
       </div>
       <div class="iq-top-navbar">
@@ -433,7 +346,7 @@
               </a>
             </div>
             <div class="navbar-breadcrumb">
-              <h5>Dashboard</h5>
+              <h5>Tasks</h5>
             </div>
             <div class="d-flex align-items-center">
               <button
@@ -529,6 +442,7 @@
                             <div
                               class="d-flex align-items-center justify-content-between"
                             >
+                              <!-- Kaç mesaj olduğu kısmı veritabanından çekilecek -->
                               <h5 class="mb-0">All Messages</h5>
                               <a class="badge badge-primary badge-card" href="#"
                                 >3</a
@@ -536,6 +450,7 @@
                             </div>
                           </div>
                           <div class="px-3 pt-0 pb-0 sub-card">
+                            <!-- Mesaj kısmı veritabanından çekilecek -->
                             <a href="#" class="iq-sub-card">
                               <div
                                 class="media align-items-center cust-card py-3 border-bottom"
@@ -554,58 +469,6 @@
                                     <h6 class="mb-0">Emma Watson</h6>
                                     <small class="text-dark"
                                       ><b>12 : 47 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/02.jpg"
-                                    alt="02"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Ashlynn Franci</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 30 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/03.jpg"
-                                    alt="03"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Kianna Carder</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 21 pm</b></small
                                     >
                                   </div>
                                   <small class="mb-0"
@@ -664,6 +527,7 @@
                             <div
                               class="d-flex align-items-center justify-content-between"
                             >
+                              <!-- kaç bildirim olduğu kısmı veritabanından çekilecek -->
                               <h5 class="mb-0">Notifications</h5>
                               <a class="badge badge-primary badge-card" href="#"
                                 >3</a
@@ -671,6 +535,7 @@
                             </div>
                           </div>
                           <div class="px-3 pt-0 pb-0 sub-card">
+                            <!-- bildirimlerin içeri kısmı veritabanından çekilecek -->
                             <a href="#" class="iq-sub-card">
                               <div
                                 class="media align-items-center cust-card py-3 border-bottom"
@@ -697,58 +562,6 @@
                                 </div>
                               </div>
                             </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/02.jpg"
-                                    alt="02"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Ashlynn Franci</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 30 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/03.jpg"
-                                    alt="03"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Kianna Carder</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 21 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
                           </div>
                           <a
                             class="right-ic btn btn-primary btn-block position-relative p-2"
@@ -762,6 +575,7 @@
                     </div>
                   </li>
                   <li class="nav-item nav-icon dropdown caption-content">
+                    <!-- kullanıcı profili kısmı (sağ üsteki) veritabanından çekilecek -->
                     <a
                       href="#"
                       class="search-toggle dropdown-toggle d-flex align-items-center"
@@ -897,6 +711,7 @@
       <div class="content-page">
         <div class="container-fluid">
           <div class="row">
+            <!-- Your Task Section -->
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body">
@@ -912,27 +727,35 @@
                           data-toggle="dropdown"
                         >
                           <div class="btn bg-body">
-                            <span class="h6">Project :</span> WorkStack
-                            Project<i
-                              class="ri-arrow-down-s-line ml-2 mr-0"
-                            ></i>
+                            <span class="h6">Project :</span>
+                            <i class="ri-arrow-down-s-line ml-2 mr-0"></i>
                           </div>
                         </div>
                         <div
                           class="dropdown-menu dropdown-menu-right"
                           aria-labelledby="dropdownMenuButton03"
                         >
-                          <a class="dropdown-item" href="#"
-                            ><i class="ri-mic-line mr-2"></i>In Progress</a
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="selectProject('Project a')"
+                            ><i class="ri-file-copy-line mr-2"></i>Project a</a
                           >
-                          <a class="dropdown-item" href="#"
-                            ><i class="ri-attachment-line mr-2"></i>Priority</a
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="selectProject('Project b')"
+                            ><i class="ri-file-copy-line mr-2"></i>Project b</a
                           >
-                          <a class="dropdown-item" href="#"
-                            ><i class="ri-file-copy-line mr-2"></i>Category</a
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            onclick="selectProject('Project c')"
+                            ><i class="ri-file-copy-line mr-2"></i>Project c</a
                           >
                         </div>
                       </div>
+
                       <a
                         href="#"
                         class="btn btn-primary"
@@ -949,265 +772,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-lg-12">
-                      <div class="card card-widget task-card">
-                        <div class="card-body">
-                          <div
-                            class="d-flex flex-wrap align-items-center justify-content-between"
-                          >
-                            <div class="d-flex align-items-center">
-                              <div
-                                class="custom-control custom-task custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck01"
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="customCheck01"
-                                ></label>
-                              </div>
-                              <div>
-                                <h5 class="mb-2">
-                                  Design landing page of WorkStack
-                                </h5>
-                                <div class="media align-items-center">
-                                  <div class="btn bg-body mr-3">
-                                    <i class="ri-align-justify mr-2"></i>5/10
-                                  </div>
-                                  <div class="btn bg-body">
-                                    <i class="ri-survey-line mr-2"></i>3
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="media align-items-center mt-md-0 mt-3">
-                              <a href="#" class="btn bg-secondary-light mr-3"
-                                >Design</a
-                              >
-                              <a
-                                class="btn bg-secondary-light"
-                                data-toggle="collapse"
-                                href="#collapseEdit1"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit1"
-                                ><i class="ri-edit-box-line m-0"></i
-                              ></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="collapse" id="collapseEdit1">
-                        <div class="card card-list task-card">
-                          <div
-                            class="card-header d-flex align-items-center justify-content-between px-0 mx-3"
-                          >
-                            <div class="header-title">
-                              <div
-                                class="custom-control custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck05"
-                                />
-                                <label
-                                  class="custom-control-label h5"
-                                  for="customCheck05"
-                                  >Mark as done</label
-                                >
-                              </div>
-                            </div>
-                            <div>
-                              <a href="#" class="btn bg-secondary-light"
-                                >Design</a
-                              >
-                            </div>
-                          </div>
-                          <div class="card-body">
-                            <div class="form-group mb-3 position-relative">
-                              <input
-                                type="text"
-                                class="form-control bg-white"
-                                placeholder="Design landing page of WorkStack"
-                              />
-                              <a
-                                href="#"
-                                class="task-edit task-simple-edit text-body"
-                                ><i class="ri-edit-box-line"></i
-                              ></a>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText2" class="h5"
-                                        >Memebers</label
-                                      >
-                                      <select
-                                        name="type"
-                                        class="selectpicker form-control"
-                                        data-style="py-0"
-                                      >
-                                        <option>Memebers</option>
-                                        <option>Kianna Septimus</option>
-                                        <option>Jaxson Herwitz</option>
-                                        <option>Ryan Schleifer</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText3" class="h5"
-                                        >Due Dates*</label
-                                      >
-                                      <input
-                                        type="date"
-                                        class="form-control"
-                                        id="exampleInputText3"
-                                        value=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Description</h5>
-                                    <p class="mb-0">
-                                      Amet minim mollit non deserunt ullamco est
-                                      sit aliqua dolor do amet sint. Velit
-                                      officia consequat duis enim velit mollit.
-                                      Exercitation veniam consequat sunt nostrud
-                                      amet.
-                                    </p>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Checklist</h5>
-                                    <div class="row">
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck1"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck1"
-                                            >Design mobile version</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck02"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck02"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck3"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck3"
-                                            >Vector images of small size.</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck04"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck04"
-                                            >Design mobile version of landing
-                                            page</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck5"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck5"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck06"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck06"
-                                            >Vector images of small
-                                            size..</label
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group mb-0">
-                              <label for="exampleInputText01" class="h5"
-                                >Attachments</label
-                              >
-                              <div class="custom-file">
-                                <input
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile001"
-                                />
-                                <label
-                                  class="custom-file-label"
-                                  for="inputGroupFile001"
-                                  >Upload media</label
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <!-- Task kısmı veritabanından çekilecek-->
                     <div class="col-lg-12">
                       <div class="card card-widget task-card">
                         <div class="card-body">
@@ -1467,783 +1032,6 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-12">
-                      <div class="card card-widget task-card">
-                        <div class="card-body">
-                          <div
-                            class="d-flex flex-wrap align-items-center justify-content-between"
-                          >
-                            <div class="d-flex align-items-center">
-                              <div
-                                class="custom-control custom-task custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck10"
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="customCheck10"
-                                ></label>
-                              </div>
-                              <div>
-                                <h5 class="mb-2">
-                                  Activate from WordPress Dashboard
-                                </h5>
-                                <div class="media align-items-center">
-                                  <div class="btn bg-body mr-3">
-                                    <i class="ri-align-justify mr-2"></i>5/10
-                                  </div>
-                                  <div class="btn bg-body">
-                                    <i class="ri-survey-line mr-2"></i>3
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="media align-items-center mt-md-0 mt-3">
-                              <a href="#" class="btn bg-primary-light mr-3"
-                                >Design</a
-                              >
-                              <a
-                                class="btn bg-primary-light"
-                                data-toggle="collapse"
-                                href="#collapseEdit3"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit3"
-                                ><i class="ri-edit-box-line m-0"></i
-                              ></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="collapse" id="collapseEdit3">
-                        <div class="card card-list task-card">
-                          <div
-                            class="card-header d-flex align-items-center justify-content-between px-0 mx-3"
-                          >
-                            <div class="header-title">
-                              <div
-                                class="custom-control custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck11"
-                                />
-                                <label
-                                  class="custom-control-label h5"
-                                  for="customCheck11"
-                                  >Mark as done</label
-                                >
-                              </div>
-                            </div>
-                            <div>
-                              <a href="#" class="btn bg-secondary-light"
-                                >Design</a
-                              >
-                            </div>
-                          </div>
-                          <div class="card-body">
-                            <div class="form-group mb-3 position-relative">
-                              <input
-                                type="text"
-                                class="form-control bg-white"
-                                placeholder="Design landing page of WorkStack"
-                              />
-                              <a
-                                href="#"
-                                class="task-edit task-simple-edit text-body"
-                                ><i class="ri-edit-box-line"></i
-                              ></a>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText2" class="h5"
-                                        >Memebers</label
-                                      >
-                                      <select
-                                        name="type"
-                                        class="selectpicker form-control"
-                                        data-style="py-0"
-                                      >
-                                        <option>Memebers</option>
-                                        <option>Kianna Septimus</option>
-                                        <option>Jaxson Herwitz</option>
-                                        <option>Ryan Schleifer</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText5" class="h5"
-                                        >Due Dates*</label
-                                      >
-                                      <input
-                                        type="date"
-                                        class="form-control"
-                                        id="exampleInputText5"
-                                        value=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Description</h5>
-                                    <p class="mb-0">
-                                      Amet minim mollit non deserunt ullamco est
-                                      sit aliqua dolor do amet sint. Velit
-                                      officia consequat duis enim velit mollit.
-                                      Exercitation veniam consequat sunt nostrud
-                                      amet.
-                                    </p>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Checklist</h5>
-                                    <div class="row">
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck12"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck12"
-                                            >Design mobile version</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck13"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck13"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck14"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck14"
-                                            >Vector images of small size.</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck15"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck15"
-                                            >Design mobile version of landing
-                                            page</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck16"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck16"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck17"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck17"
-                                            >Vector images of small
-                                            size..</label
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group mb-0">
-                              <label for="exampleInputText01" class="h5"
-                                >Attachments</label
-                              >
-                              <div class="custom-file">
-                                <input
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile03"
-                                />
-                                <label
-                                  class="custom-file-label"
-                                  for="inputGroupFile03"
-                                  >Upload media</label
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="card card-widget task-card">
-                        <div class="card-body">
-                          <div
-                            class="d-flex flex-wrap align-items-center justify-content-between"
-                          >
-                            <div class="d-flex align-items-center">
-                              <div
-                                class="custom-control custom-task custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck18"
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="customCheck18"
-                                ></label>
-                              </div>
-                              <div>
-                                <h5 class="mb-2">
-                                  Add code to output Post Title & Text
-                                </h5>
-                                <div class="media align-items-center">
-                                  <div class="btn bg-body mr-3">
-                                    <i class="ri-align-justify mr-2"></i>5/10
-                                  </div>
-                                  <div class="btn bg-body">
-                                    <i class="ri-survey-line mr-2"></i>3
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="media align-items-center mt-md-0 mt-3">
-                              <a href="#" class="btn bg-info-light mr-3"
-                                >Design</a
-                              >
-                              <a
-                                class="btn bg-info-light"
-                                data-toggle="collapse"
-                                href="#collapseEdit4"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit4"
-                                ><i class="ri-edit-box-line m-0"></i
-                              ></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="collapse" id="collapseEdit4">
-                        <div class="card card-list task-card">
-                          <div
-                            class="card-header d-flex align-items-center justify-content-between px-0 mx-3"
-                          >
-                            <div class="header-title">
-                              <div
-                                class="custom-control custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck19"
-                                />
-                                <label
-                                  class="custom-control-label h5"
-                                  for="customCheck19"
-                                  >Mark as done</label
-                                >
-                              </div>
-                            </div>
-                            <div>
-                              <a href="#" class="btn bg-secondary-light"
-                                >Design</a
-                              >
-                            </div>
-                          </div>
-                          <div class="card-body">
-                            <div class="form-group mb-3 position-relative">
-                              <input
-                                type="text"
-                                class="form-control bg-white"
-                                placeholder="Design landing page of WorkStack"
-                              />
-                              <a
-                                href="#"
-                                class="task-edit task-simple-edit text-body"
-                                ><i class="ri-edit-box-line"></i
-                              ></a>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText2" class="h5"
-                                        >Memebers</label
-                                      >
-                                      <select
-                                        name="type"
-                                        class="selectpicker form-control"
-                                        data-style="py-0"
-                                      >
-                                        <option>Memebers</option>
-                                        <option>Kianna Septimus</option>
-                                        <option>Jaxson Herwitz</option>
-                                        <option>Ryan Schleifer</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText6" class="h5"
-                                        >Due Dates*</label
-                                      >
-                                      <input
-                                        type="date"
-                                        class="form-control"
-                                        id="exampleInputText6"
-                                        value=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Description</h5>
-                                    <p class="mb-0">
-                                      Amet minim mollit non deserunt ullamco est
-                                      sit aliqua dolor do amet sint. Velit
-                                      officia consequat duis enim velit mollit.
-                                      Exercitation veniam consequat sunt nostrud
-                                      amet.
-                                    </p>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Checklist</h5>
-                                    <div class="row">
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck20"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck20"
-                                            >Design mobile version</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck21"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck21"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck22"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck22"
-                                            >Vector images of small size.</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck23"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck23"
-                                            >Design mobile version of landing
-                                            page</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck24"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck24"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck25"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck25"
-                                            >Vector images of small
-                                            size..</label
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group mb-0">
-                              <label for="exampleInputText01" class="h5"
-                                >Attachments</label
-                              >
-                              <div class="custom-file">
-                                <input
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile04"
-                                />
-                                <label
-                                  class="custom-file-label"
-                                  for="inputGroupFile04"
-                                  >Upload media</label
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="card card-widget task-card mb-0">
-                        <div class="card-body">
-                          <div
-                            class="d-flex flex-wrap align-items-center justify-content-between"
-                          >
-                            <div class="d-flex align-items-center">
-                              <div
-                                class="custom-control custom-task custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck26"
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="customCheck26"
-                                ></label>
-                              </div>
-                              <div>
-                                <h5 class="mb-2">
-                                  Add Header and Footer To Template
-                                </h5>
-                                <div class="media align-items-center">
-                                  <div class="btn bg-body mr-3">
-                                    <i class="ri-align-justify mr-2"></i>5/10
-                                  </div>
-                                  <div class="btn bg-body">
-                                    <i class="ri-survey-line mr-2"></i>3
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="media align-items-center mt-md-0 mt-3">
-                              <a href="#" class="btn bg-secondary-light mr-3"
-                                >Design</a
-                              >
-                              <a
-                                class="btn bg-secondary-light"
-                                data-toggle="collapse"
-                                href="#collapseEdit5"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit5"
-                                ><i class="ri-edit-box-line m-0"></i
-                              ></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="collapse" id="collapseEdit5">
-                        <div class="card card-list task-card">
-                          <div
-                            class="card-header d-flex align-items-center justify-content-between px-0 mx-3"
-                          >
-                            <div class="header-title">
-                              <div
-                                class="custom-control custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck27"
-                                />
-                                <label
-                                  class="custom-control-label h5"
-                                  for="customCheck27"
-                                  >Mark as done</label
-                                >
-                              </div>
-                            </div>
-                            <div>
-                              <a href="#" class="btn bg-secondary-light"
-                                >Design</a
-                              >
-                            </div>
-                          </div>
-                          <div class="card-body">
-                            <div class="form-group mb-3 position-relative">
-                              <input
-                                type="text"
-                                class="form-control bg-white"
-                                placeholder="Design landing page of WorkStack"
-                              />
-                              <a
-                                href="#"
-                                class="task-edit task-simple-edit text-body"
-                                ><i class="ri-edit-box-line"></i
-                              ></a>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText2" class="h5"
-                                        >Memebers</label
-                                      >
-                                      <select
-                                        name="type"
-                                        class="selectpicker form-control"
-                                        data-style="py-0"
-                                      >
-                                        <option>Memebers</option>
-                                        <option>Kianna Septimus</option>
-                                        <option>Jaxson Herwitz</option>
-                                        <option>Ryan Schleifer</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText7" class="h5"
-                                        >Due Dates*</label
-                                      >
-                                      <input
-                                        type="date"
-                                        class="form-control"
-                                        id="exampleInputText7"
-                                        value=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Description</h5>
-                                    <p class="mb-0">
-                                      Amet minim mollit non deserunt ullamco est
-                                      sit aliqua dolor do amet sint. Velit
-                                      officia consequat duis enim velit mollit.
-                                      Exercitation veniam consequat sunt nostrud
-                                      amet.
-                                    </p>
-                                  </div>
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Checklist</h5>
-                                    <div class="row">
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck28"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck28"
-                                            >Design mobile version</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck29"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck29"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck30"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck30"
-                                            >Vector images of small size.</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck31"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck31"
-                                            >Design mobile version of landing
-                                            page</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck32"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck32"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck33"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck33"
-                                            >Vector images of small
-                                            size..</label
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group mb-0">
-                              <label for="exampleInputText01" class="h5"
-                                >Attachments</label
-                              >
-                              <div class="custom-file">
-                                <input
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile05"
-                                />
-                                <label
-                                  class="custom-file-label"
-                                  for="inputGroupFile05"
-                                  >Upload media</label
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -2255,89 +1043,7 @@
     </div>
     <!-- Wrapper End-->
 
-    <!-- Modal list start -->
-    <div
-      class="modal fade"
-      role="dialog"
-      aria-modal="true"
-      id="new-project-modal"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header d-block text-center pb-3 border-bttom">
-            <h3 class="modal-title" id="exampleModalCenterTitle01">
-              New Project
-            </h3>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText01" class="h5"
-                    >Project Name*</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText01"
-                    placeholder="Project Name"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Categories *</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Category</option>
-                    <option>Android</option>
-                    <option>IOS</option>
-                    <option>Ui/Ux Design</option>
-                    <option>Development</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText004" class="h5">Due Dates*</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="exampleInputText004"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText07" class="h5"
-                    >Assign Members*</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText07"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div
-                  class="d-flex flex-wrap align-items-ceter justify-content-center mt-2"
-                >
-                  <div class="btn btn-primary mr-3" data-dismiss="modal">
-                    Save
-                  </div>
-                  <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Yeni görev oluşturma bölmesi -->
     <div
       class="modal fade bd-example-modal-lg"
       role="dialog"
@@ -2365,21 +1071,25 @@
                   ></a>
                 </div>
               </div>
-              <div class="col-lg-4">
+              <!-- Bu bölmedeki kullanıcılar veritabanından çekilecek -->
+              <div class="col-lg">
                 <div class="form-group mb-3">
                   <label for="exampleInputText2" class="h5">Assigned to</label>
                   <select
                     name="type"
                     class="selectpicker form-control"
                     data-style="py-0"
+                    multiple
+                    size="3"
                   >
-                    <option>Memebers</option>
                     <option>Kianna Septimus</option>
                     <option>Jaxson Herwitz</option>
                     <option>Ryan Schleifer</option>
+                    <!-- Diğer kullanıcı seçenekleri -->
                   </select>
                 </div>
               </div>
+
               <div class="col-lg-4">
                 <div class="form-group mb-3">
                   <label for="exampleInputText05" class="h5">Due Dates*</label>
@@ -2391,6 +1101,7 @@
                   />
                 </div>
               </div>
+              <!-- burada yazan kategoriler proje kısmında oluşturulan kategorilerden seçilmeli -->
               <div class="col-lg-4">
                 <div class="form-group mb-3">
                   <label for="exampleInputText2" class="h5">Category</label>
@@ -2399,11 +1110,7 @@
                     class="selectpicker form-control"
                     data-style="py-0"
                   >
-                    <option>Design</option>
-                    <option>Android</option>
-                    <option>IOS</option>
-                    <option>Ui/Ux Design</option>
-                    <option>Development</option>
+                    <option>Proje kısmından çekilecek</option>
                   </select>
                 </div>
               </div>
@@ -2460,226 +1167,8 @@
         </div>
       </div>
     </div>
-    <div
-      class="modal fade bd-example-modal-lg"
-      role="dialog"
-      aria-modal="true"
-      id="new-user-modal"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header d-block text-center pb-3 border-bttom">
-            <h3 class="modal-title" id="exampleModalCenterTitle02">New User</h3>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group mb-3 custom-file-small">
-                  <label for="exampleInputText01" class="h5"
-                    >Upload Profile Picture</label
-                  >
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="inputGroupFile02"
-                    />
-                    <label class="custom-file-label" for="inputGroupFile02"
-                      >Choose file</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Full Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText2"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText04" class="h5"
-                    >Phone Number</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText04"
-                    placeholder="Enter phone number"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText006" class="h5">Email</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText006"
-                    placeholder="Enter your Email"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Type</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Type</option>
-                    <option>Trainee</option>
-                    <option>Employee</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Role</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Role</option>
-                    <option>Designer</option>
-                    <option>Developer</option>
-                    <option>Manager</option>
-                    <option>BDE</option>
-                    <option>SEO</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div
-                  class="d-flex flex-wrap align-items-ceter justify-content-center mt-2"
-                >
-                  <div class="btn btn-primary mr-3" data-dismiss="modal">
-                    Save
-                  </div>
-                  <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade bd-example-modal-lg"
-      role="dialog"
-      aria-modal="true"
-      id="new-create-modal"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header d-block text-center pb-3 border-bttom">
-            <h3 class="modal-title" id="exampleModalCenterTitle03">New Task</h3>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText03" class="h5">Task Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText03"
-                    placeholder="Enter task Name"
-                  />
-                  <a href="#" class="task-edit text-body"
-                    ><i class="ri-edit-box-line"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Assigned to</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Memebers</option>
-                    <option>Kianna Septimus</option>
-                    <option>Jaxson Herwitz</option>
-                    <option>Ryan Schleifer</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Project Name</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Enter your project Name</option>
-                    <option>Ui/Ux Design</option>
-                    <option>Dashboard Templates</option>
-                    <option>Wordpress Themes</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText40" class="h5">Description</label>
-                  <textarea
-                    class="form-control"
-                    id="exampleInputText40"
-                    rows="2"
-                    placeholder="Textarea"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText8" class="h5">Checklist</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText8"
-                    placeholder="Add List"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-0">
-                  <label for="exampleInputText01" class="h5">Attachments</label>
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="inputGroupFile01"
-                    />
-                    <label class="custom-file-label" for="inputGroupFile01"
-                      >Upload media</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div
-                  class="d-flex flex-wrap align-items-ceter justify-content-center mt-4"
-                >
-                  <div class="btn btn-primary mr-3" data-dismiss="modal">
-                    Save
-                  </div>
-                  <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <!-- Footer-->
     <footer class="iq-footer">
       <div class="container-fluid">
         <div class="row">
@@ -2701,23 +1190,25 @@
         </div>
       </div>
     </footer>
+
     <!-- Backend Bundle JavaScript -->
     <script src="../public-app/js/backend-bundle.min.js"></script>
-
     <!-- Table Treeview JavaScript -->
     <script src="../public-app/js/table-treeview.js"></script>
-
     <!-- Chart Custom JavaScript -->
     <script src="../public-app/js/customizer.js"></script>
-
     <!-- Chart Custom JavaScript -->
     <script async src="../public-app/js/chart-custom.js"></script>
     <!-- Chart Custom JavaScript -->
     <script async src="../public-app/js/slider.js"></script>
-
     <!-- app JavaScript -->
     <script src="../public-app/js/app.js"></script>
-
     <script src="../public-app/vendor/moment.min.js"></script>
+    <script>
+      function selectProject(projectName) {
+        const projectSpan = document.querySelector(".h6");
+        projectSpan.textContent = `Project: ${projectName}`;
+      }
+    </script>
   </body>
 </html>

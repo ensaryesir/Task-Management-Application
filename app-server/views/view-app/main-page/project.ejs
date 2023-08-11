@@ -20,7 +20,6 @@
       rel="stylesheet"
       href="../public-app/vendor/remixicon/fonts/remixicon.css"
     />
-
     <link
       rel="stylesheet"
       href="../public-app/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css"
@@ -34,14 +33,17 @@
       href="../public-app/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css"
     />
   </head>
+
   <body class="  ">
-    <!-- loader Start -->
+    <!-- Loader Start -->
     <div id="loading">
       <div id="loading-center"></div>
     </div>
-    <!-- loader END -->
+    <!-- Loader End -->
+
     <!-- Wrapper Start -->
     <div class="wrapper">
+      <!-- Sidebar -->
       <div class="iq-sidebar sidebar-default">
         <div class="iq-sidebar-logo d-flex align-items-center">
           <a href="/index" class="header-logo">
@@ -143,29 +145,6 @@
                 </a>
               </li>
               <li class="">
-                <a href="/desk" class="svg-icon">
-                  <svg
-                    class="svg-icon"
-                    width="25"
-                    height="25"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                    ></path>
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                  </svg>
-                  <span class="ml-4">Desk</span>
-                </a>
-              </li>
-              <li class="">
                 <a href="/calender" class="svg-icon">
                   <svg
                     class="svg-icon"
@@ -217,7 +196,7 @@
                       d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
                     ></path>
                   </svg>
-                  <span class="ml-4">other page</span>
+                  <span class="ml-4">Other Page</span>
                   <i class="las la-angle-right iq-arrow-right arrow-active"></i>
                   <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
                 </a>
@@ -282,74 +261,8 @@
                       </li>
                     </ul>
                   </li>
-
-                  <li class=" ">
-                    <a
-                      href="#pricing"
-                      class="collapsed"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        class="svg-icon"
-                        id="p-dash16"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                      </svg>
-                      <span class="ml-4">Pricing</span>
-                      <i
-                        class="las la-angle-right iq-arrow-right arrow-active"
-                      ></i>
-                      <i
-                        class="las la-angle-down iq-arrow-right arrow-hover"
-                      ></i>
-                    </a>
-                    <ul
-                      id="pricing"
-                      class="iq-submenu collapse"
-                      data-parent="#otherpage"
-                    >
-                      <li class="">
-                        <a href="/pricing">
-                          <i class="las la-minus"></i><span>Pricing 1</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
                   <li class="">
-                    <a href="/timeline" class="svg-icon">
-                      <svg
-                        class="svg-icon"
-                        id="p-dash016"
-                        width="20"
-                        height="20"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      <span class="ml-4">Timeline</span>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="/invoice" class="svg-icon">
+                    <a href="/faq" class="svg-icon">
                       <svg
                         class="svg-icon"
                         id="p-dash07"
@@ -371,13 +284,14 @@
                         <line x1="16" y1="17" x2="8" y2="17"></line>
                         <polyline points="10 9 9 9 8 9"></polyline>
                       </svg>
-                      <span class="ml-4">Invoice</span>
+                      <span class="ml-4">Faqs</span>
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
           </nav>
+
           <div id="sidebar-bottom" class="position-relative sidebar-bottom">
             <div class="card border-none mb-0 shadow-none">
               <div class="card-body p-0">
@@ -418,7 +332,6 @@
               </div>
             </div>
           </div>
-          <div class="pt-5 pb-2"></div>
         </div>
       </div>
       <div class="iq-top-navbar">
@@ -433,7 +346,7 @@
               </a>
             </div>
             <div class="navbar-breadcrumb">
-              <h5>Dashboard</h5>
+              <h5>Project</h5>
             </div>
             <div class="d-flex align-items-center">
               <button
@@ -525,6 +438,7 @@
                     >
                       <div class="card shadow-none m-0">
                         <div class="card-body p-0">
+                          <!-- Burası kaç mesajın olduğu kısım veritabanından çekilecek-->
                           <div class="cust-title p-3">
                             <div
                               class="d-flex align-items-center justify-content-between"
@@ -535,59 +449,9 @@
                               >
                             </div>
                           </div>
+
+                          <!-- Burası mesaj kısmı veritabanında çekilecek-->
                           <div class="px-3 pt-0 pb-0 sub-card">
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/01.jpg"
-                                    alt="01"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Emma Watson</h6>
-                                    <small class="text-dark"
-                                      ><b>12 : 47 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/02.jpg"
-                                    alt="02"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Ashlynn Franci</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 30 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
                             <a href="#" class="iq-sub-card">
                               <div
                                 class="media align-items-center cust-card py-3"
@@ -660,6 +524,7 @@
                     >
                       <div class="card shadow-none m-0">
                         <div class="card-body p-0">
+                          <!-- Burası bildirim kısmı veritabanında çekilecek-->
                           <div class="cust-title p-3">
                             <div
                               class="d-flex align-items-center justify-content-between"
@@ -670,59 +535,9 @@
                               >
                             </div>
                           </div>
+
+                          <!-- Burası bildirim kısmı veritabanından çekilecek-->
                           <div class="px-3 pt-0 pb-0 sub-card">
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/01.jpg"
-                                    alt="01"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Emma Watson</h6>
-                                    <small class="text-dark"
-                                      ><b>12 : 47 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/02.jpg"
-                                    alt="02"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Ashlynn Franci</h6>
-                                    <small class="text-dark"
-                                      ><b>11 : 30 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
                             <a href="#" class="iq-sub-card">
                               <div
                                 class="media align-items-center cust-card py-3"
@@ -761,6 +576,8 @@
                       </div>
                     </div>
                   </li>
+
+                  <!-- Sağ üstteki kullanıcı kısmı veritabanından çekilecek -->
                   <li class="nav-item nav-icon dropdown caption-content">
                     <a
                       href="#"
@@ -770,11 +587,13 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
+                      <!-- resimler veritabanına kayıt edilecek daha sonra oradan çekilecek-->
                       <img
                         src="../public-app/images/user/1.jpg"
                         class="img-fluid rounded-circle"
                         alt="user"
                       />
+                      <!-- kullanıcı adı veritabanından çekilecek-->
                       <div class="caption ml-3">
                         <h6 class="mb-0 line-height">
                           Savannah Nguyen<i class="las la-angle-down ml-2"></i>
@@ -894,6 +713,8 @@
           </nav>
         </div>
       </div>
+
+      <!-- Content -->
       <div class="content-page">
         <div class="container-fluid">
           <div class="row">
@@ -904,6 +725,7 @@
                     class="d-flex flex-wrap align-items-center justify-content-between breadcrumb-content"
                   >
                     <h5>Your Projects</h5>
+                    <!---->
                     <div
                       class="d-flex flex-wrap align-items-center justify-content-between"
                     >
@@ -997,56 +819,15 @@
               </div>
             </div>
           </div>
+
+          <!--Kart Görünümü-->
           <div
             id="grid"
             class="item-content animate__animated animate__fadeIn active"
             data-toggle-extra="tab-content"
           >
+            <!-- kartlara veriler veritabanından çekilecek-->
             <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-01"
-                        class="circle-progress-01 circle-progress circle-progress-primary"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="25"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Theme development</h5>
-                    <p class="mb-3">
-                      Preparing framework of block-based WordPress Theme.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/05.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/06.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-primary link-shadow">High</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="col-lg-4 col-md-6">
                 <div class="card card-block card-stretch card-height">
                   <div class="card-body">
@@ -1107,521 +888,16 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-03"
-                        class="circle-progress circle-progress-warning"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="15"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Wordpress Dashboard Plugins</h5>
-                    <p class="mb-3">
-                      Customize your WordPress with smart WordPress plugins.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/01.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/02.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/03.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-warning link-shadow">Low</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-04"
-                        class="circle-progress circle-progress-success"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="40"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Hotel Management App</h5>
-                    <p class="mb-3">
-                      Build a Cloud-based Hotel Management Theme.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/05.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/06.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/07.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-success link-shadow">High</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-05"
-                        class="circle-progress-01 circle-progress circle-progress-primary"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="25"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Video Streaming Theme</h5>
-                    <p class="mb-3">Launch OTT and media streaming theme.</p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/05.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/06.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-primary link-shadow">High</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-06"
-                        class="circle-progress circle-progress-secondary"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="30"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Medical Clinic Theme</h5>
-                    <p class="mb-3">
-                      Hospital and private clinic doctor's theme.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/07.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/02.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/04.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/08.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-secondary link-shadow"
-                        >Medium</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-07"
-                        class="circle-progress circle-progress-warning"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="15"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Social Media Dashboard</h5>
-                    <p class="mb-3">
-                      Leverage data with Social Media Dashboard.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/01.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/02.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/03.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-warning link-shadow">Low</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-08"
-                        class="circle-progress circle-progress-success"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="40"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Cloud Service Theme</h5>
-                    <p class="mb-3">
-                      Exclusively for cloud-based/ Startup theme.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/05.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/06.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/07.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-success link-shadow">High</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-09"
-                        class="circle-progress-01 circle-progress circle-progress-primary"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="25"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Automotive WordPress Theme</h5>
-                    <p class="mb-3">
-                      Dealership-based business WordPress theme.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/05.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/06.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-primary link-shadow">High</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-10"
-                        class="circle-progress circle-progress-secondary"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="30"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Online Education Template</h5>
-                    <p class="mb-3">Remote students and teachers dashboard.</p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/07.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/02.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/04.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/08.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-secondary link-shadow"
-                        >Medium</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-11"
-                        class="circle-progress circle-progress-warning"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="15"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">Blog/Magazine Theme</h5>
-                    <p class="mb-3">Launch visually appealing Blog theme.</p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/01.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/02.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/03.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-warning link-shadow">Low</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-12"
-                        class="circle-progress circle-progress-success"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="40"
-                        data-type="percent"
-                      ></div>
-                      <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">XAMIN: AI Theme</h5>
-                    <p class="mb-3">
-                      Artificial Intelligence inspired WordPress theme.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-3 border-top"
-                    >
-                      <div class="iq-media-group">
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/05.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/06.jpg"
-                            alt=""
-                          />
-                        </a>
-                        <a href="#" class="iq-media">
-                          <img
-                            class="img-fluid avatar-40 rounded-circle"
-                            src="../public-app/images/user/07.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <a class="btn btn-white text-success link-shadow">High</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
+
+          <!--List Görünümü-->
           <div
             id="list"
             class="item-content animate__animated animate__fadeIn"
             data-toggle-extra="tab-content"
           >
+            <!--listelere veriler veritabanından çekilecek-->
             <div class="row">
               <div class="col-lg-6">
                 <div class="card">
@@ -1671,609 +947,6 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-14"
-                            class="circle-progress-01 circle-progress circle-progress-secondary"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="30"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Theme development</h5>
-                            <p class="mb-0">
-                              Start development server and check Vue project in
-                              browser.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/07.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/02.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/04.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/08.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-secondary link-shadow"
-                          >Medium</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-15"
-                            class="circle-progress-01 circle-progress circle-progress-warning"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="15"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Vuetify Dashboard</h5>
-                            <p class="mb-0">
-                              Customize your WordPress with smart WordPress
-                              plugins.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/01.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/02.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/03.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-warning link-shadow"
-                          >Low</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-16"
-                            class="circle-progress-01 circle-progress circle-progress-success"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="40"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">WordPress Dashboard</h5>
-                            <p class="mb-0">
-                              Build a Cloud-based Hotel Management Theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/05.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/06.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/07.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-success link-shadow"
-                          >High</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-17"
-                            class="circle-progress-01 circle-progress circle-progress-primary"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="25"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Hotel Management App</h5>
-                            <p class="mb-0">
-                              Build a Cloud-based Hotel Management Theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/05.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/06.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-primary link-shadow"
-                          >High</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-18"
-                            class="circle-progress-01 circle-progress circle-progress-secondary"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="30"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Video Streaming Theme</h5>
-                            <p class="mb-0">
-                              Launch OTT and media streaming theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/07.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/02.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/04.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/08.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-secondary link-shadow"
-                          >Medium</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-19"
-                            class="circle-progress-01 circle-progress circle-progress-warning"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="15"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Medical Clinic Theme</h5>
-                            <p class="mb-0">
-                              Hospital and private clinic doctor's theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/01.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/02.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/03.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-warning link-shadow"
-                          >Low</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-20"
-                            class="circle-progress-01 circle-progress circle-progress-success"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="40"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Social Media Dashboard</h5>
-                            <p class="mb-0">
-                              Leverage data with Social Media Dashboard.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/05.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/06.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/07.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-success link-shadow"
-                          >High</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-21"
-                            class="circle-progress-01 circle-progress circle-progress-primary"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="25"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Cloud Service Theme</h5>
-                            <p class="mb-0">
-                              Exclusively for cloud-based/ Startup theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/05.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/06.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-primary link-shadow"
-                          >High</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-22"
-                            class="circle-progress-01 circle-progress circle-progress-secondary"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="30"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Automotive WordPress</h5>
-                            <p class="mb-0">
-                              Dealership-based business WordPress theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/07.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/02.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/04.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/08.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-secondary link-shadow"
-                          >Medium</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-23"
-                            class="circle-progress-01 circle-progress circle-progress-warning"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="15"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Online Education</h5>
-                            <p class="mb-0">
-                              Remote students and teachers dashboard.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/01.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/02.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/03.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-warning link-shadow"
-                          >Low</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-24"
-                            class="circle-progress-01 circle-progress circle-progress-success"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="40"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Blog/Magazine Theme</h5>
-                            <p class="mb-0">
-                              Launch visually appealing Blog theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-4 text-sm-right mt-3 mt-sm-0">
-                        <div class="iq-media-group">
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/05.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/06.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <a href="#" class="iq-media">
-                            <img
-                              class="img-fluid avatar-40 rounded-circle"
-                              src="../public-app/images/user/07.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <a class="btn btn-white text-success link-shadow"
-                          >High</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <!-- Page end  -->
@@ -2282,7 +955,7 @@
     </div>
     <!-- Wrapper End-->
 
-    <!-- Modal list start -->
+    <!-- Project Creation Pane -->
     <div
       class="modal fade"
       role="dialog"
@@ -2314,17 +987,12 @@
               <div class="col-lg-6">
                 <div class="form-group mb-3">
                   <label for="exampleInputText2" class="h5">Categories *</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Category</option>
-                    <option>Android</option>
-                    <option>IOS</option>
-                    <option>Ui/Ux Design</option>
-                    <option>Development</option>
-                  </select>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputText01"
+                    placeholder="Categories"
+                  />
                 </div>
               </div>
               <div class="col-lg-6">
@@ -2365,348 +1033,8 @@
         </div>
       </div>
     </div>
-    <div
-      class="modal fade bd-example-modal-lg"
-      role="dialog"
-      aria-modal="true"
-      id="new-task-modal"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header d-block text-center pb-3 border-bttom">
-            <h3 class="modal-title" id="exampleModalCenterTitle">New Task</h3>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText02" class="h5">Task Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText02"
-                    placeholder="Enter task Name"
-                  />
-                  <a href="#" class="task-edit text-body"
-                    ><i class="ri-edit-box-line"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Assigned to</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Memebers</option>
-                    <option>Kianna Septimus</option>
-                    <option>Jaxson Herwitz</option>
-                    <option>Ryan Schleifer</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText05" class="h5">Due Dates*</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="exampleInputText05"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Category</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Design</option>
-                    <option>Android</option>
-                    <option>IOS</option>
-                    <option>Ui/Ux Design</option>
-                    <option>Development</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText040" class="h5"
-                    >Description</label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="exampleInputText040"
-                    rows="2"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText005" class="h5">Checklist</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText005"
-                    placeholder="Add List"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-0">
-                  <label for="exampleInputText01" class="h5">Attachments</label>
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="inputGroupFile003"
-                    />
-                    <label class="custom-file-label" for="inputGroupFile003"
-                      >Upload media</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div
-                  class="d-flex flex-wrap align-items-ceter justify-content-center mt-4"
-                >
-                  <div class="btn btn-primary mr-3" data-dismiss="modal">
-                    Save
-                  </div>
-                  <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade bd-example-modal-lg"
-      role="dialog"
-      aria-modal="true"
-      id="new-user-modal"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header d-block text-center pb-3 border-bttom">
-            <h3 class="modal-title" id="exampleModalCenterTitle02">New User</h3>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group mb-3 custom-file-small">
-                  <label for="exampleInputText01" class="h5"
-                    >Upload Profile Picture</label
-                  >
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="inputGroupFile02"
-                    />
-                    <label class="custom-file-label" for="inputGroupFile02"
-                      >Choose file</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Full Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText2"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText04" class="h5"
-                    >Phone Number</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText04"
-                    placeholder="Enter phone number"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText006" class="h5">Email</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText006"
-                    placeholder="Enter your Email"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Type</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Type</option>
-                    <option>Trainee</option>
-                    <option>Employee</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Role</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Role</option>
-                    <option>Designer</option>
-                    <option>Developer</option>
-                    <option>Manager</option>
-                    <option>BDE</option>
-                    <option>SEO</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div
-                  class="d-flex flex-wrap align-items-ceter justify-content-center mt-2"
-                >
-                  <div class="btn btn-primary mr-3" data-dismiss="modal">
-                    Save
-                  </div>
-                  <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade bd-example-modal-lg"
-      role="dialog"
-      aria-modal="true"
-      id="new-create-modal"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header d-block text-center pb-3 border-bttom">
-            <h3 class="modal-title" id="exampleModalCenterTitle03">New Task</h3>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText03" class="h5">Task Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText03"
-                    placeholder="Enter task Name"
-                  />
-                  <a href="#" class="task-edit text-body"
-                    ><i class="ri-edit-box-line"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Assigned to</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Memebers</option>
-                    <option>Kianna Septimus</option>
-                    <option>Jaxson Herwitz</option>
-                    <option>Ryan Schleifer</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Project Name</label>
-                  <select
-                    name="type"
-                    class="selectpicker form-control"
-                    data-style="py-0"
-                  >
-                    <option>Enter your project Name</option>
-                    <option>Ui/Ux Design</option>
-                    <option>Dashboard Templates</option>
-                    <option>Wordpress Themes</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText40" class="h5">Description</label>
-                  <textarea
-                    class="form-control"
-                    id="exampleInputText40"
-                    rows="2"
-                    placeholder="Textarea"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText8" class="h5">Checklist</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText8"
-                    placeholder="Add List"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-0">
-                  <label for="exampleInputText01" class="h5">Attachments</label>
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="inputGroupFile01"
-                    />
-                    <label class="custom-file-label" for="inputGroupFile01"
-                      >Upload media</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div
-                  class="d-flex flex-wrap align-items-ceter justify-content-center mt-4"
-                >
-                  <div class="btn btn-primary mr-3" data-dismiss="modal">
-                    Save
-                  </div>
-                  <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <!--Footer-->
     <footer class="iq-footer">
       <div class="container-fluid">
         <div class="row">
@@ -2728,23 +1056,19 @@
         </div>
       </div>
     </footer>
+
     <!-- Backend Bundle JavaScript -->
     <script src="../public-app/js/backend-bundle.min.js"></script>
-
     <!-- Table Treeview JavaScript -->
     <script src="../public-app/js/table-treeview.js"></script>
-
     <!-- Chart Custom JavaScript -->
     <script src="../public-app/js/customizer.js"></script>
-
     <!-- Chart Custom JavaScript -->
     <script async src="../public-app/js/chart-custom.js"></script>
     <!-- Chart Custom JavaScript -->
     <script async src="../public-app/js/slider.js"></script>
-
     <!-- app JavaScript -->
     <script src="../public-app/js/app.js"></script>
-
     <script src="../public-app/vendor/moment.min.js"></script>
   </body>
 </html>
