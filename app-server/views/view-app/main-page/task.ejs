@@ -245,13 +245,8 @@
                       data-parent="#otherpage"
                     >
                       <li class="">
-                        <a href="/user-profile">
-                          <i class="las la-minus"></i><span>User Profile</span>
-                        </a>
-                      </li>
-                      <li class="">
-                        <a href="/user-add">
-                          <i class="las la-minus"></i><span>User Add</span>
+                        <a href="/user-profile-edit">
+                          <i class="las la-minus"></i><span>Edit Profile</span>
                         </a>
                       </li>
                       <li class="">
@@ -291,49 +286,10 @@
               </li>
             </ul>
           </nav>
-
-          <div id="sidebar-bottom" class="position-relative sidebar-bottom">
-            <div class="card border-none mb-0 shadow-none">
-              <div class="card-body p-0">
-                <div class="sidebarbottom-content">
-                  <h5 class="mb-3">Task Performed</h5>
-                  <div
-                    id="circle-progress-6"
-                    class="sidebar-circle circle-progress circle-progress-primary mb-4"
-                    data-min-value="0"
-                    data-max-value="100"
-                    data-value="55"
-                    data-type="percent"
-                  ></div>
-                  <div class="custom-control custom-radio mb-1">
-                    <input
-                      type="radio"
-                      id="customRadio6"
-                      name="customRadio-1"
-                      class="custom-control-input"
-                      checked=""
-                    />
-                    <label class="custom-control-label" for="customRadio6"
-                      >Performed task</label
-                    >
-                  </div>
-                  <div class="custom-control custom-radio">
-                    <input
-                      type="radio"
-                      id="customRadio7"
-                      name="customRadio-1"
-                      class="custom-control-input"
-                    />
-                    <label class="custom-control-label" for="customRadio7"
-                      >Incomplete Task</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+
+      <!-- Top Navbar -->
       <div class="iq-top-navbar">
         <div class="iq-navbar-custom">
           <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -402,91 +358,6 @@
                           ></a>
                         </div>
                       </form>
-                    </div>
-                  </li>
-                  <li class="nav-item nav-icon nav-item-icon dropdown">
-                    <a
-                      href="#"
-                      class="search-toggle dropdown-toggle"
-                      id="dropdownMenuButton2"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-mail"
-                      >
-                        <path
-                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                        ></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                      </svg>
-                      <span class="bg-primary"></span>
-                    </a>
-                    <div
-                      class="iq-sub-dropdown dropdown-menu"
-                      aria-labelledby="dropdownMenuButton2"
-                    >
-                      <div class="card shadow-none m-0">
-                        <div class="card-body p-0">
-                          <div class="cust-title p-3">
-                            <div
-                              class="d-flex align-items-center justify-content-between"
-                            >
-                              <!-- Kaç mesaj olduğu kısmı veritabanından çekilecek -->
-                              <h5 class="mb-0">All Messages</h5>
-                              <a class="badge badge-primary badge-card" href="#"
-                                >3</a
-                              >
-                            </div>
-                          </div>
-                          <div class="px-3 pt-0 pb-0 sub-card">
-                            <!-- Mesaj kısmı veritabanından çekilecek -->
-                            <a href="#" class="iq-sub-card">
-                              <div
-                                class="media align-items-center cust-card py-3 border-bottom"
-                              >
-                                <div class="">
-                                  <img
-                                    class="avatar-50 rounded-small"
-                                    src="../public-app/images/user/01.jpg"
-                                    alt="01"
-                                  />
-                                </div>
-                                <div class="media-body ml-3">
-                                  <div
-                                    class="d-flex align-items-center justify-content-between"
-                                  >
-                                    <h6 class="mb-0">Emma Watson</h6>
-                                    <small class="text-dark"
-                                      ><b>12 : 47 pm</b></small
-                                    >
-                                  </div>
-                                  <small class="mb-0"
-                                    >Lorem ipsum dolor sit amet</small
-                                  >
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <a
-                            class="right-ic btn btn-primary btn-block position-relative p-2"
-                            href="#"
-                            role="button"
-                          >
-                            View All
-                          </a>
-                        </div>
-                      </div>
                     </div>
                   </li>
                   <li class="nav-item nav-icon nav-item-icon dropdown">
@@ -584,11 +455,6 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img
-                        src="../public-app/images/user/1.jpg"
-                        class="img-fluid rounded-circle"
-                        alt="user"
-                      />
                       <div class="caption ml-3">
                         <h6 class="mb-0 line-height">
                           Savannah Nguyen<i class="las la-angle-down ml-2"></i>
@@ -599,25 +465,6 @@
                       class="dropdown-menu dropdown-menu-right border-none"
                       aria-labelledby="dropdownMenuButton"
                     >
-                      <li class="dropdown-item d-flex svg-icon">
-                        <svg
-                          class="svg-icon mr-0 text-primary"
-                          id="h-01-p"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                        <a href="/user-profile">My Profile</a>
-                      </li>
                       <li class="dropdown-item d-flex svg-icon">
                         <svg
                           class="svg-icon mr-0 text-primary"
@@ -636,50 +483,6 @@
                           />
                         </svg>
                         <a href="/user-profile-edit">Edit Profile</a>
-                      </li>
-                      <li class="dropdown-item d-flex svg-icon">
-                        <svg
-                          class="svg-icon mr-0 text-primary"
-                          id="h-03-p"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                          />
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                        </svg>
-                        <a href="/user-account-setting">Account Settings</a>
-                      </li>
-                      <li class="dropdown-item d-flex svg-icon">
-                        <svg
-                          class="svg-icon mr-0 text-primary"
-                          id="h-04-p"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                          />
-                        </svg>
-                        <a href="/user-privacy-setting">Privacy Settings</a>
                       </li>
                       <li class="dropdown-item d-flex svg-icon border-top">
                         <svg
@@ -708,6 +511,8 @@
           </nav>
         </div>
       </div>
+
+      <!-- Content -->
       <div class="content-page">
         <div class="container-fluid">
           <div class="row">
@@ -747,15 +552,8 @@
                             onclick="selectProject('Project b')"
                             ><i class="ri-file-copy-line mr-2"></i>Project b</a
                           >
-                          <a
-                            class="dropdown-item"
-                            href="#"
-                            onclick="selectProject('Project c')"
-                            ><i class="ri-file-copy-line mr-2"></i>Project c</a
-                          >
                         </div>
                       </div>
-
                       <a
                         href="#"
                         class="btn btn-primary"
@@ -780,50 +578,68 @@
                             class="d-flex flex-wrap align-items-center justify-content-between"
                           >
                             <div class="d-flex align-items-center">
+
+                              <!-- Yüzdelik Görünüm -->
                               <div
-                                class="custom-control custom-task custom-checkbox custom-control-inline"
+                                class="d-flex align-items-center justify-content-between mr-3"
                               >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck2"
-                                />
-                                <label
-                                  class="custom-control-label"
-                                  for="customCheck2"
-                                ></label>
+                                <div
+                                  id="circle-progress-02"
+                                  class="circle-progress circle-progress-secondary"
+                                  data-min-value="0"
+                                  data-max-value="100"
+                                  data-value="30"
+                                  data-type="percent"
+                                ></div>
                               </div>
-                              <div>
-                                <h5 class="mb-2">
-                                  Create unique style of inner pages
-                                </h5>
-                                <div class="media align-items-center">
-                                  <div class="btn bg-body mr-3">
-                                    <i class="ri-align-justify mr-2"></i>5/10
-                                  </div>
-                                  <div class="btn bg-body">
-                                    <i class="ri-survey-line mr-2"></i>3
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="media align-items-center mt-md-0 mt-3">
-                              <a href="#" class="btn bg-success-light mr-3"
-                                >Design</a
-                              >
-                              <a
-                                class="btn bg-success-light"
+
+                              <span
+                                class="btn bg-success-light mr-3"
                                 data-toggle="collapse"
                                 href="#collapseEdit2"
                                 role="button"
                                 aria-expanded="false"
                                 aria-controls="collapseEdit2"
-                                ><i class="ri-edit-box-line m-0"></i
-                              ></a>
+                                >Complete</span
+                              >
+                              <span
+                                class="btn bg-info-light mr-3"
+                                data-toggle="collapse"
+                                href="#collapseEdit2"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="collapseEdit2"
+                                >Continues</span
+                              >
+                              <span
+                                class="btn bg-secondary-light mr-3"
+                                data-toggle="collapse"
+                                href="#collapseEdit2"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="collapseEdit2"
+                                >Cancelled</span
+                              >
+
+                              <h5>Create unique style of inner pages</h5>
+                            </div>
+
+                            <div class="media align-items-center mt-md-0 mt-3">
+                              <a
+                                class="btn bg-success-light mr-3"
+                                data-toggle="collapse"
+                                href="#collapseEdit2"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="collapseEdit2"
+                                >Design</a
+                              >
                             </div>
                           </div>
                         </div>
                       </div>
+
+                      <!-- Task Design Section-->
                       <div class="collapse" id="collapseEdit2">
                         <div class="card card-list task-card">
                           <div
@@ -856,7 +672,7 @@
                               <input
                                 type="text"
                                 class="form-control bg-white"
-                                placeholder="Design landing page of WorkStack"
+                                placeholder="Change the name of the task."
                               />
                               <a
                                 href="#"
@@ -870,24 +686,28 @@
                                   <div class="col-lg-6">
                                     <div class="form-group mb-0">
                                       <label for="exampleInputText2" class="h5"
-                                        >Memebers</label
+                                        >Members</label
                                       >
                                       <select
                                         name="type"
                                         class="selectpicker form-control"
                                         data-style="py-0"
+                                        multiple
+                                        size="3"
                                       >
-                                        <option>Memebers</option>
                                         <option>Kianna Septimus</option>
                                         <option>Jaxson Herwitz</option>
                                         <option>Ryan Schleifer</option>
+                                        <!-- Diğer kullanıcı seçenekleri -->
                                       </select>
                                     </div>
                                   </div>
+
+                                  <!-- Due Dates-->
                                   <div class="col-lg-6">
                                     <div class="form-group mb-0">
                                       <label for="exampleInputText4" class="h5"
-                                        >Due Dates*</label
+                                        >Due Dates</label
                                       >
                                       <input
                                         type="date"
@@ -903,129 +723,15 @@
                             <div class="card mb-3">
                               <div class="card-body">
                                 <div class="row">
+                                  <!-- Description -->
                                   <div class="col-lg-6">
                                     <h5 class="mb-2">Description</h5>
                                     <p class="mb-0">
-                                      Amet minim mollit non deserunt ullamco est
-                                      sit aliqua dolor do amet sint. Velit
-                                      officia consequat duis enim velit mollit.
-                                      Exercitation veniam consequat sunt nostrud
-                                      amet.
+                                      veritabanındaki açıklama kısmından
+                                      çekilecek
                                     </p>
                                   </div>
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Checklist</h5>
-                                    <div class="row">
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck4"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck4"
-                                            >Design mobile version</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck07"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck07"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck6"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck6"
-                                            >Vector images of small size.</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <div class="col-lg-6">
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck7"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck7"
-                                            >Design mobile version of landing
-                                            page</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck8"
-                                          />
-                                          <label
-                                            class="custom-control-label mb-1"
-                                            for="customCheck8"
-                                            >Use images of unsplash.com</label
-                                          >
-                                        </div>
-                                        <div
-                                          class="custom-control custom-checkbox custom-control-inline mr-0"
-                                        >
-                                          <input
-                                            type="checkbox"
-                                            class="custom-control-input"
-                                            id="customCheck9"
-                                          />
-                                          <label
-                                            class="custom-control-label"
-                                            for="customCheck9"
-                                            >Vector images of small
-                                            size..</label
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
-                            </div>
-                            <div class="form-group mb-0">
-                              <label for="exampleInputText01" class="h5"
-                                >Attachments</label
-                              >
-                              <div class="custom-file">
-                                <input
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile002"
-                                />
-                                <label
-                                  class="custom-file-label"
-                                  for="inputGroupFile002"
-                                  >Upload media</label
-                                >
                               </div>
                             </div>
                           </div>
@@ -1037,7 +743,6 @@
               </div>
             </div>
           </div>
-          <!-- Page end  -->
         </div>
       </div>
     </div>
@@ -1092,7 +797,7 @@
 
               <div class="col-lg-4">
                 <div class="form-group mb-3">
-                  <label for="exampleInputText05" class="h5">Due Dates*</label>
+                  <label for="exampleInputText05" class="h5">Due Dates</label>
                   <input
                     type="date"
                     class="form-control"
@@ -1110,6 +815,7 @@
                     class="selectpicker form-control"
                     data-style="py-0"
                   >
+                    <option disabled selected>Nothing selected</option>
                     <option>Proje kısmından çekilecek</option>
                   </select>
                 </div>
@@ -1124,32 +830,6 @@
                     id="exampleInputText040"
                     rows="2"
                   ></textarea>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText005" class="h5">Checklist</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText005"
-                    placeholder="Add List"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-0">
-                  <label for="exampleInputText01" class="h5">Attachments</label>
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="inputGroupFile003"
-                    />
-                    <label class="custom-file-label" for="inputGroupFile003"
-                      >Upload media</label
-                    >
-                  </div>
                 </div>
               </div>
               <div class="col-lg-12">
