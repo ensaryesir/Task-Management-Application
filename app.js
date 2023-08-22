@@ -63,6 +63,9 @@ app.use("/", authRouter);
 const userRouter = require("./app-server/routes/user-operations-router");
 app.use("/", userRouter);
 
+const projectRouter = require("./app-server/routes/project-router");
+app.use("/", projectRouter);
+
 //Accessing the Public folder (this process is called mapping)
 //(app-server/views/view-app/public)
 app.use(

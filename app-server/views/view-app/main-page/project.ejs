@@ -460,7 +460,8 @@
                       <!-- kullanıcı adı veritabanından çekilecek-->
                       <div class="caption ml-3">
                         <h6 class="mb-0 line-height">
-                          Savannah Nguyen<i class="las la-angle-down ml-2"></i>
+                          <!-- user name -->
+                          <i class="las la-angle-down ml-2"></i>
                         </h6>
                       </div>
                     </a>
@@ -614,7 +615,7 @@
                         class="circle-progress circle-progress-secondary"
                         data-min-value="0"
                         data-max-value="100"
-                        data-value="30"
+                        data-value="60"
                         data-type="percent"
                       ></div>
                     </div>
@@ -685,67 +686,91 @@
               New Project
             </h3>
           </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText01" class="h5"
-                    >Project Name*</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText01"
-                    placeholder="Project Name"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText2" class="h5">Categories *</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText01"
-                    placeholder="Categories"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText004" class="h5">Due Dates*</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="exampleInputText004"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mb-3">
-                  <label for="exampleInputText07" class="h5"
-                    >Assign Members*</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleInputText07"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div
-                  class="d-flex flex-wrap align-items-ceter justify-content-center mt-2"
-                >
-                  <div class="btn btn-primary mr-3" data-dismiss="modal">
-                    Save
+          <form id="projectForm" action="/project" method="POST">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group mb-3">
+                    <label for="projectName" class="h5">Project Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="projectName"
+                      name="projectName"
+                      placeholder="Project Name"
+                      required
+                    />
                   </div>
-                  <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group mb-3">
+                    <label for="projectDescription" class="h5">Project Description*</label
+                    >
+                    <textarea
+                      type="text"
+                      class="form-control"
+                      id="projectDescription"
+                      name="projectDescription"
+                      placeholder="Project Description"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group mb-3">
+                    <label for="categories" class="h5">Categories*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="categories"
+                      name="categories"
+                      placeholder="Categories"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group mb-3">
+                    <label for="dueDate" class="h5">Due Dates*</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="dueDate"
+                      name="dueDate"
+                      value=""
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group mb-3">
+                    <label for="assignMembers" class="h5"
+                      >Assign Members*</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="assignMembers"
+                      name="assignMembers"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div
+                    class="form-actions d-flex flex-wrap align-items-ceter justify-content-center mt-2"
+                  >
+                    <button type="submit" class="btn btn-primary mr-3">
+                      Save
+                    </button>
+                    <button type="reset" class="form-actions btn btn-primary">
+                      Cancel
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

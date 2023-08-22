@@ -657,7 +657,7 @@
 
     <!--Registration -->
     <section id="registration">
-      <br /><br />
+      <br />
       <section class="vh-100">
         <div class="container py-5 h-100">
           <div
@@ -674,7 +674,7 @@
               <form
                 onsubmit="return validateForm()"
                 id="registrationForm"
-                action="/register"
+                action="/registration"
                 method="POST"
               >
                 <img
@@ -682,6 +682,19 @@
                   class="img-fluid mb-4"
                   alt="Phone image"
                 />
+                <!-- Name-Surname -->
+                <div class="form-outline mb-4">
+                  <input
+                    type="name"
+                    id="form1Example13"
+                    class="form-control form-control-lg"
+                    name="flName"
+                    required
+                  />
+                  <label class="form-label" for="form1Example13"
+                    >First Name - Last Name</label
+                  >
+                </div>
                 <!-- Email input -->
                 <div class="form-outline mb-4">
                   <input
@@ -806,7 +819,6 @@
         </div>
       </section>
     </section>
-    <br /><br /><br /><br />
     <!--Registration End -->
 
     <!-- Footer Subscribe -->

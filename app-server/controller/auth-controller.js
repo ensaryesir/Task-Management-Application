@@ -38,8 +38,12 @@ exports.userLogin = async (req, res) => {
     if (isPasswordValid) {
       const token = generateJWT(user);
       res.cookie("token", token, { httpOnly: true });
-
       req.session.user = user;
+
+      // burada flName değişkeni tutulup index.ejs sayfasından çekilecek
+      const ShowUserName = user.flName;
+      console.log(ShowUserName);
+
       res.redirect("/index");
     } else {
       res.status(401).json({ error: "Invalid password." });
@@ -54,7 +58,7 @@ exports.userLogin = async (req, res) => {
 
 exports.userRegister = async (req, res) => {
   try {
-    const { email, password, name } = req.body;
+    const { flName, email, password } = req.body;
     const existingUser = await AuthModel.findOne({ email });
 
     if (existingUser) {
@@ -65,7 +69,11 @@ exports.userRegister = async (req, res) => {
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-    const newUser = new AuthModel({ email, name, password: hashedPassword });
+    const newUser = new AuthModel({
+      flName,
+      email,
+      password: hashedPassword,
+    });
     await newUser.save();
 
     const token = generateJWT(newUser);
