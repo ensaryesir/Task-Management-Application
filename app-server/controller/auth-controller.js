@@ -217,3 +217,13 @@ exports.resetPassword = async (req, res) => {
     res.status(500).json({ error: "An error occurred during password reset." });
   }
 };
+
+exports.listAuth = async (req, res) => {
+  try {
+    const auths = await AuthModel.find();
+    res.render("view-app/main-page/employee", { auths: auths });
+  } catch (err) {
+    console.error("Error fetching project section", err);
+    res.status(500).send("Internal Server Error");
+  }
+};

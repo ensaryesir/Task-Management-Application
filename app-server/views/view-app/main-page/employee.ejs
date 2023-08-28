@@ -581,13 +581,15 @@
               </div>
             </div>
           </div>
+
+          <!-- Card View -->
           <div
             id="grid"
             class="item-content animate__animated animate__fadeIn active"
             data-toggle-extra="tab-content"
           >
             <div class="row">
-              <!-- çalışanların içeriği veritabanından çekilecek -->
+              <% for (const auth of auths) { %>
               <div class="col-lg-4 col-md-6">
                 <div
                   class="card-transparent card-block card-stretch card-height"
@@ -595,10 +597,10 @@
                   <div class="card-body text-center p-0">
                     <div class="item">
                       <div class="odr-img"></div>
-                      <br>
+                      <br />
                       <div class="odr-content rounded">
-                        <h4 class="mb-2">Ruben Franci</h4>
-                        <p class="mb-3">rubenfranci@gmail.com</p>
+                        <h4 class="mb-2"><%=auth.flName%></h4>
+                        <p class="mb-3"><%=auth.email%></p>
                         <ul class="list-unstyled mb-3">
                           <li
                             class="bg-secondary-light rounded-circle iq-card-icon-small mr-4"
@@ -624,50 +626,58 @@
                   </div>
                 </div>
               </div>
+              <% } %>
             </div>
           </div>
+
+          <!-- List View -->
           <div
             id="list"
             class="item-content animate__animated animate__fadeIn"
             data-toggle-extra="tab-content"
           >
+            <% for (const auth of auths) { %>
             <div class="table-responsive rounded bg-white mb-4">
               <table class="table mb-0 table-borderless tbl-server-info">
                 <tbody>
-                  <!-- çalışanların içeriği veritabanından çekilecek -->
                   <tr>
                     <td>
                       <div class="media align-items-center">
-                        <h5 class="ml-3">Paityn Siphron</h5>
+                        <h5 class="ml-3"><%=auth.flName%></h5>
                       </div>
                     </td>
-                    <td>paitynsiphron@gmail.com</td>
+                    <td><%=auth.email%></td>
                     <td>
                       <div class="media align-items-center">
-                        <div
-                          class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"
-                        >
-                          <i class="ri-mail-open-line m-0"></i>
-                        </div>
-                        <div
-                          class="bg-primary-light rounded-circle iq-card-icon-small mr-3"
-                        >
-                          <i class="ri-chat-3-line m-0"></i>
-                        </div>
-                        <div
-                          class="bg-success-light rounded-circle iq-card-icon-small"
-                        >
-                          <i class="ri-phone-line m-0"></i>
+                        <div class="d-flex align-items-center mr-3">
+                          <div
+                            class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"
+                          >
+                            <i class="ri-mail-open-line m-0"></i>
+                          </div>
+                          <div
+                            class="bg-primary-light rounded-circle iq-card-icon-small mr-3"
+                          >
+                            <i class="ri-chat-3-line m-0"></i>
+                          </div>
+                          <div
+                            class="bg-success-light rounded-circle iq-card-icon-small"
+                          >
+                            <i class="ri-phone-line m-0"></i>
+                          </div>
                         </div>
                       </div>
                     </td>
                     <td>
-                      <a href="#" class="btn btn-primary">Message</a>
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="btn btn-primary">Message</a>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <% } %>
           </div>
         </div>
       </div>

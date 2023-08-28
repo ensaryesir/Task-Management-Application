@@ -40,4 +40,6 @@ router.post("/reset-password", authController.resetPassword);
 
 router.post("/registration", authController.userRegister);
 
+router.get("/employee", authController.listAuth);
+
 module.exports = router;
