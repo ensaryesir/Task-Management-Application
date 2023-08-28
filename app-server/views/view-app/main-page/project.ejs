@@ -32,6 +32,9 @@
       rel="stylesheet"
       href="../public-app/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css"
     />
+    <link rel="stylesheet" href="../public-app/css/custom.css" />
+    <link rel="stylesheet" href="../public-app/css/list.css" />
+    <link rel="stylesheet" href="../public-app/css/card.css" />
   </head>
 
   <body class="  ">
@@ -596,75 +599,79 @@
             </div>
           </div>
 
-          <!--Kart Görünümü-->
+          <!-- Card View -->
           <div
             id="grid"
             class="item-content animate__animated animate__fadeIn active"
             data-toggle-extra="tab-content"
           >
-            <!-- kartlara veriler veritabanından çekilecek-->
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="card card-block card-stretch card-height">
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-4"
-                    >
-                      <div
-                        id="circle-progress-02"
-                        class="circle-progress circle-progress-secondary"
-                        data-min-value="0"
-                        data-max-value="100"
-                        data-value="60"
-                        data-type="percent"
-                      ></div>
-                    </div>
-                    <h5 class="mb-1">Vuetify Dashboard in Admin</h5>
-                    <p class="mb-3">
-                      Start development server and check Vue project in browser.
-                    </p>
+            <div class="containerCard">
+              <% for (const project of projects) { %>
+              <div class="wrapperCard">
+                <div class="cardProject">
+                  <div class="front">
+                    <h1 class="projectNameH1"><%=project.projectName%></h1>
+                    <p class="dueDate"><%=project.dueDate%></p>
+                  </div>
+                  <div class="right">
+                    <h2 class="projectNameH2"><%=project.projectName%></h2>
+                    <p class="projectP"><%= project.projectDescription%></p>
                   </div>
                 </div>
+                <div class="img-wrapperCard">
+                  <img
+                    class="imgCard"
+                    src="../public-app/images/logo.png"
+                    alt="WorkStack"
+                  />
+                </div>
               </div>
+              <% } %>
             </div>
           </div>
 
-          <!--List Görünümü-->
+          <!--List View-->
           <div
             id="list"
             class="item-content animate__animated animate__fadeIn"
             data-toggle-extra="tab-content"
           >
-            <!--listelere veriler veritabanından çekilecek-->
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-8">
-                        <div class="d-flex align-items-center">
-                          <div
-                            id="circle-progress-13"
-                            class="circle-progress-01 circle-progress circle-progress-primary"
-                            data-min-value="0"
-                            data-max-value="100"
-                            data-value="25"
-                            data-type="percent"
-                          ></div>
-                          <div class="ml-3">
-                            <h5 class="mb-1">Theme development</h5>
-                            <p class="mb-0">
-                              Preparing framework of block-based WordPress
-                              Theme.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <% for (const project of projects) { %>
+
+            <article
+              class="listPostCard listLight blue"
+              data-project-id="<%= project._id %>"
+            >
+              <a class="listPostCard__img_link" href="#">
+                <img
+                  class="listPostCard__img"
+                  src="https://picsum.photos/1000/1000"
+                  alt="Image Title"
+                />
+              </a>
+              <div class="listPostCard__text t-listDark">
+                <h1 class="listPostCard__title blue">
+                  <a href="#"><%= project.projectName %></a>
+                </h1>
+                <div class="listPostCard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">
+                    <i class="fas fa-calendar-alt mr-2"></i><%=project.dueDate%>
+                  </time>
                 </div>
+                <div class="listPostCard__bar"></div>
+                <div class="listPostCard__preview-txt">
+                  <%= project.projectDescription%>
+                </div>
+                <ul class="listPostCard__tagbox">
+                  <% for (const member of project.assignMembers) { %>
+                  <li class="tag__item">
+                    <i class="fas fa-tag"></i><%= member %>
+                  </li>
+                  <% } %>
+                </ul>
               </div>
-            </div>
+            </article>
+            <% } %>
           </div>
           <!-- Page end  -->
         </div>
@@ -704,7 +711,8 @@
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group mb-3">
-                    <label for="projectDescription" class="h5">Project Description*</label
+                    <label for="projectDescription" class="h5"
+                      >Project Description*</label
                     >
                     <textarea
                       type="text"

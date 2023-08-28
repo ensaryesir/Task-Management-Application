@@ -13,10 +13,6 @@ module.exports.faq = function (req, res) {
   res.render("view-app/main-page/faq");
 };
 
-module.exports.project = function (req, res) {
-  res.render("view-app/main-page/project");
-};
-
 module.exports.task = function (req, res) {
   res.render("view-app/main-page/task");
 };

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Sarala:700|Exo+2:300');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: 1px solid transparent;
+}
+
+.wrapperCard {
+    width: 280px;
+    height: 480px;
+    perspective: 800px;
+    position: relative;
+}
+
+.cardProject {
+    width: 320px;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-140px);
+    transition: transform 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    cursor: pointer;
+}
+
+.cardProject>div {
+    position: absolute;
+    width: 320px;
+    height: 450px;
+    padding: 34px 21px;
+    transition: all 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.front {
+    background-image: linear-gradient(180deg, #e1e5ea 0%, rgba(92, 91, 94, 0) 100%);
+    transform: rotateY(0deg) translateZ(160px);
+    border-radius: 34px 3px 0 0;
+}
+
+.right {
+    background-image: linear-gradient(0deg, rgba(145, 141, 144, 1) 0%, #e1e5ea 100%);
+    opacity: 0.08;
+    transform: rotateY(90deg) translateZ(160px);
+    border-radius: 0 0 3px 34px;
+}
+
+.cardProject:hover {
+    transform: translateZ(-160px) rotateY(-90deg);
+}
+
+.cardProject:hover .front {
+    opacity: 0;
+}
+
+.cardProject:hover .right {
+    opacity: 1;
+}
+
+.projectNameH1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: -.25px;
+    transform: translateX(-40px);
+    font-family: 'Sarala';
+    font-weight: 700;
+}
+
+.projectNameH2 {
+    font-size: 21px;
+    transform: translateX(-34px);
+}
+
+.projectP {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.imgCard {
+    transform-origin: top right;
+    transition: transform 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    transition-delay: 100ms;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+
+.img-wrapperCard {
+    animation: float 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;
+    position: absolute;
+    top: 45%;
+    right: 40%;
+    pointer-events: none;
+    backface-visibility: hidden;
+}
+
+@keyframes float {
+    0% {
+        transform: translateZ(20px);
+    }
+
+    100% {
+        transform: translateY(-21px) translateX(-13px) translateZ(30px);
+    }
+}
+
+.cardProject:hover~.img-wrapperCard img {
+    transform: scale(0.7) translateX(55%) translateY(130%) rotateZ(90deg);
+}
+
+
+.cardProject:hover button {
+    transform: scale(1) skewY(0);
+}
+
+.cardProject:not(:hover) button {
+    opacity: 0;
+}
+
+.dueDate {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    font-size: 16px;
+    opacity: .54;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.33;
+        transform: scale(.89);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        transform: scale(.67);
+    }
+}
+
+.containerCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    /* İstenilen aralığı ayarlayabilirsiniz */
+}
+
+.wrapperCard {
+    width: calc(33.33% - 20px);
+    /* Üç sütunlu düzen için genişlik ayarı */
+    margin-bottom: 10px;
+    /* Alt alta geçiş için boşluk ayarı */
+}
+
+/* Diğer stillendirme kodları */

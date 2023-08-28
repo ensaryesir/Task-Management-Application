@@ -29,3 +29,13 @@ exports.createProject = async (req, res) => {
     res.status(500).json({ error: "Bir hata oluştu." });
   }
 };
+
+exports.listProject = async (req, res) => {
+  try {
+    const projects = await Project.find();
+    res.render("view-app/main-page/project", { projects: projects });
+  } catch (err) {
+    console.error("Error fetching project section", err);
+    res.status(500).send("Internal Server Error");
+  }
+};
