@@ -66,6 +66,9 @@ app.use("/", userRouter);
 const projectRouter = require("./app-server/routes/project-router");
 app.use("/", projectRouter);
 
+const taskRouter = require("./app-server/routes/task-router");
+app.use("/", taskRouter);
+
 //Accessing the Public folder (this process is called mapping)
 //(app-server/views/view-app/public)
 app.use(
@@ -94,6 +97,8 @@ webpush.setVapidDetails(
   publicVapidKey,
   privateVapidKey
 );
+
+app.use(express.urlencoded({ extended: true }));
 
 const port = 7000;
 app.listen(port, () => {

@@ -40,7 +40,23 @@
 
   function createSchedule() {
     window.cal.createSchedules([
-        //buraya projeler ve tasklar veritabanından çekilip eklenecek
+      //buraya projeler veritabanından çekilip eklenecek
+      {
+        id: "3",
+        calendarId: "2",
+        title: "Meeting of design team",
+        category: "time",
+        bgColor: "#F35421",
+        color: "#ffffff",
+        borderColor: "#DA4701",
+        dueDateClass: "",
+        start:
+          moment(new Date(), "YYYY-MM-DD").add(0, "days").format("YYYY-MM-DD") +
+          "T04:30+09:00",
+        end:
+          moment(new Date(), "YYYY-MM-DD").add(0, "days").format("YYYY-MM-DD") +
+          "T05:10+09:00",
+      },
     ]);
   }
 

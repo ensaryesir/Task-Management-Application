@@ -12,14 +12,16 @@ module.exports.registration = function (req, res) {
 
 exports.resetPasswordPage = (req, res) => {
   try {
-    // resetEmail değişkenini kullanarak reset-password.ejs sayfasını render edin
-    res.render("view-home/home/reset-password", { resetEmail: req.session.resetEmail });
+    res.render("view-home/home/reset-password", {
+      resetEmail: req.session.resetEmail,
+    });
   } catch (err) {
     console.error("Error rendering reset password page:", err);
-    res.status(500).json({ error: "An error occurred while rendering reset password page." });
+    res.status(500).json({
+      error: "An error occurred while rendering reset password page.",
+    });
   }
 };
-
 
 module.exports.error = function (req, res) {
   res.render("view-home/home/404-error");

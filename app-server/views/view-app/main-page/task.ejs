@@ -541,20 +541,19 @@
                           class="dropdown-menu dropdown-menu-right"
                           aria-labelledby="dropdownMenuButton03"
                         >
+                          <% for (const project of projects) { %>
                           <a
                             class="dropdown-item"
                             href="#"
-                            onclick="selectProject('Project a')"
-                            ><i class="ri-file-copy-line mr-2"></i>Project a</a
+                            onclick="selectProject('<%=project.projectName%>')"
                           >
-                          <a
-                            class="dropdown-item"
-                            href="#"
-                            onclick="selectProject('Project b')"
-                            ><i class="ri-file-copy-line mr-2"></i>Project b</a
-                          >
+                            <i class="ri-file-copy-line mr-2"></i
+                            ><%=project.projectName%>
+                          </a>
+                          <% } %>
                         </div>
                       </div>
+
                       <a
                         href="#"
                         class="btn btn-primary"
@@ -567,177 +566,14 @@
                 </div>
               </div>
             </div>
+
+            <!-- Main Content -->
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body">
                   <div class="row">
-                    <!-- Task kısmı veritabanından çekilecek-->
-                    <div class="col-lg-12">
-                      <div class="card card-widget task-card">
-                        <div class="card-body">
-                          <div
-                            class="d-flex flex-wrap align-items-center justify-content-between"
-                          >
-                            <div class="d-flex align-items-center">
-                              <!-- Yüzdelik Görünüm -->
-                              <div
-                                class="d-flex align-items-center justify-content-between mr-3"
-                              >
-                                <div
-                                  id="circle-progress-02"
-                                  class="circle-progress circle-progress-secondary"
-                                  data-min-value="0"
-                                  data-max-value="100"
-                                  data-value="30"
-                                  data-type="percent"
-                                ></div>
-                              </div>
-
-                              <span
-                                class="btn bg-success-light mr-3"
-                                data-toggle="collapse"
-                                href="#collapseEdit2"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit2"
-                                >Complete</span
-                              >
-                              <span
-                                class="btn bg-info-light mr-3"
-                                data-toggle="collapse"
-                                href="#collapseEdit2"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit2"
-                                >Continues</span
-                              >
-                              <span
-                                class="btn bg-secondary-light mr-3"
-                                data-toggle="collapse"
-                                href="#collapseEdit2"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit2"
-                                >Cancelled</span
-                              >
-
-                              <h5>Create unique style of inner pages</h5>
-                            </div>
-
-                            <div class="media align-items-center mt-md-0 mt-3">
-                              <a
-                                class="btn bg-success-light mr-3"
-                                data-toggle="collapse"
-                                href="#collapseEdit2"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="collapseEdit2"
-                                >Design</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Task Design Section-->
-                      <div class="collapse" id="collapseEdit2">
-                        <div class="card card-list task-card">
-                          <div
-                            class="card-header d-flex align-items-center justify-content-between px-0 mx-3"
-                          >
-                            <div class="header-title">
-                              <div
-                                class="custom-control custom-checkbox custom-control-inline"
-                              >
-                                <input
-                                  type="checkbox"
-                                  class="custom-control-input"
-                                  id="customCheck006"
-                                />
-                                <label
-                                  class="custom-control-label h5"
-                                  for="customCheck006"
-                                  >Mark as done</label
-                                >
-                              </div>
-                            </div>
-                            <div>
-                              <a href="#" class="btn bg-secondary-light"
-                                >Design</a
-                              >
-                            </div>
-                          </div>
-                          <div class="card-body">
-                            <div class="form-group mb-3 position-relative">
-                              <input
-                                type="text"
-                                class="form-control bg-white"
-                                placeholder="Change the name of the task."
-                              />
-                              <a
-                                href="#"
-                                class="task-edit task-simple-edit text-body"
-                                ><i class="ri-edit-box-line"></i
-                              ></a>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText2" class="h5"
-                                        >Members</label
-                                      >
-                                      <select
-                                        name="type"
-                                        class="selectpicker form-control"
-                                        data-style="py-0"
-                                        multiple
-                                        size="3"
-                                      >
-                                        <option>Kianna Septimus</option>
-                                        <option>Jaxson Herwitz</option>
-                                        <option>Ryan Schleifer</option>
-                                        <!-- Diğer kullanıcı seçenekleri -->
-                                      </select>
-                                    </div>
-                                  </div>
-
-                                  <!-- Due Dates-->
-                                  <div class="col-lg-6">
-                                    <div class="form-group mb-0">
-                                      <label for="exampleInputText4" class="h5"
-                                        >Due Dates</label
-                                      >
-                                      <input
-                                        type="date"
-                                        class="form-control"
-                                        id="exampleInputText4"
-                                        value=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card mb-3">
-                              <div class="card-body">
-                                <div class="row">
-                                  <!-- Description -->
-                                  <div class="col-lg-6">
-                                    <h5 class="mb-2">Description</h5>
-                                    <p class="mb-0">
-                                      veritabanındaki açıklama kısmından
-                                      çekilecek
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <!-- Task Section (Content) -->
+                    
                   </div>
                 </div>
               </div>
@@ -748,7 +584,7 @@
     </div>
     <!-- Wrapper End-->
 
-    <!-- Yeni görev oluşturma bölmesi -->
+    <!-- New Task Creation Pane -->
     <div
       class="modal fade bd-example-modal-lg"
       role="dialog"
@@ -763,17 +599,19 @@
           <div class="modal-body">
             <form id="taskForm" action="/task" method="POST">
               <div class="row">
-                <!-- burada yazan kategoriler proje kısmında oluşturulan kategorilerden seçilmeli -->
                 <div class="col-lg-12">
                   <div class="form-group mb-3">
                     <label for="exampleInputText2" class="h5">Project</label>
                     <select
-                      name="type"
+                      id="projectSelect"
+                      name="projectName"
                       class="selectpicker form-control"
                       data-style="py-0"
                     >
                       <option disabled selected>Nothing selected</option>
-                      <option>Proje kısmından çekilecek</option>
+                      <% for (const project of projects) { %>
+                      <option><%=project.projectName%></option>
+                      <% } %>
                     </select>
                   </div>
                 </div>
@@ -782,6 +620,7 @@
                     <label for="exampleInputText02" class="h5">Task Name</label>
                     <input
                       type="text"
+                      name="taskName"
                       class="form-control"
                       id="exampleInputText02"
                       placeholder="Enter task Name"
@@ -791,23 +630,24 @@
                     ></a>
                   </div>
                 </div>
-                <!-- Bu bölmedeki kullanıcılar veritabanından çekilecek -->
                 <div class="col-lg">
                   <div class="form-group mb-3">
                     <label for="exampleInputText2" class="h5"
                       >Assigned to</label
                     >
                     <select
-                      name="type"
+                      id="memberSelect"
+                      name="assignMembers"
                       class="selectpicker form-control"
                       data-style="py-0"
                       multiple
                       size="3"
                     >
-                      <option>Kianna Septimus</option>
-                      <option>Jaxson Herwitz</option>
-                      <option>Ryan Schleifer</option>
-                      <!-- Diğer kullanıcı seçenekleri -->
+                      <%for (const project of projects) { %>
+                      <!---->
+                      <% for (const member of project.assignMembers) { %>
+                      <option><%= member %></option>
+                      <% } %> <% } %>
                     </select>
                   </div>
                 </div>
@@ -817,6 +657,7 @@
                     <label for="exampleInputText05" class="h5">Due Dates</label>
                     <input
                       type="date"
+                      name="dueDate"
                       class="form-control"
                       id="exampleInputText05"
                       value=""
@@ -832,6 +673,7 @@
                     <textarea
                       class="form-control"
                       id="exampleInputText040"
+                      name="taskDescription"
                       rows="2"
                     ></textarea>
                   </div>
@@ -843,7 +685,11 @@
                     <button class="btn btn-primary mr-3" type="submit">
                       Save
                     </button>
-                    <button class="btn btn-primary mr-3" type="reset">
+                    <button
+                      id="cancelButton"
+                      class="btn btn-primary mr-3"
+                      type="reset"
+                    >
                       Cancel
                     </button>
                   </div>

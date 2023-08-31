@@ -560,7 +560,11 @@
                         </div>
                       </div>
                       <div class="card-body">
-                        <form>
+                        <form
+                          id="userForm"
+                          action="/user-profile-edit"
+                          method="POST"
+                        >
                           <div class="form-group row align-items-center">
                             <div class="col-md-12">
                               <div class="profile-img-edit"></div>
@@ -570,49 +574,61 @@
                             <div class="form-group col-sm-6">
                               <label for="fname">First Name:</label>
                               <input
+                                name="firstName"
                                 type="text"
                                 class="form-control"
                                 id="fname"
+                                required
                               />
                             </div>
                             <div class="form-group col-sm-6">
                               <label for="lname">Last Name:</label>
                               <input
+                                name="lastName"
                                 type="text"
                                 class="form-control"
                                 id="lname"
+                                required
                               />
                             </div>
                             <div class="form-group col-sm-6">
                               <label for="uname">User Name:</label>
                               <input
+                                name="userName"
                                 type="text"
                                 class="form-control"
                                 id="uname"
+                                required
                               />
                             </div>
                             <div class="form-group col-sm-6">
                               <label for="cname">City:</label>
                               <input
+                                name="city"
                                 type="text"
                                 class="form-control"
                                 id="cname"
+                                required
                               />
                             </div>
                             <div class="form-group col-sm-6">
                               <label for="contactNumber">Contact Number:</label>
                               <input
+                                name="contactNumber"
                                 type="text"
                                 class="form-control"
                                 id="contactNumber"
+                                required
                               />
                             </div>
                             <div class="form-group col-sm-6">
                               <label for="email">Email:</label>
                               <input
+                                name="email"
                                 type="email"
                                 class="form-control"
                                 id="email"
+                                required
                               />
                             </div>
                             <div class="form-group col-sm-6">
@@ -623,7 +639,8 @@
                                 <input
                                   type="radio"
                                   id="customRadio6"
-                                  name="customRadio1"
+                                  name="gender"
+                                  value="male"
                                   class="custom-control-input"
                                   checked=""
                                 />
@@ -639,7 +656,8 @@
                                 <input
                                   type="radio"
                                   id="customRadio7"
-                                  name="customRadio1"
+                                  name="gender"
+                                  value="female"
                                   class="custom-control-input"
                                 />
                                 <label
@@ -651,11 +669,18 @@
                             </div>
                             <div class="form-group col-sm-6">
                               <label for="dob">Date Of Birth:</label>
-                              <input class="form-control" id="dob" />
+                              <input
+                                name="dob"
+                                type="date"
+                                class="form-control"
+                                id="dob"
+                                required
+                              />
                             </div>
                             <div class="form-group col-sm-6">
                               <label>Marital Status:</label>
                               <select
+                                name="maritalStatus"
                                 class="form-control"
                                 id="exampleFormControlSelect1"
                               >
@@ -669,6 +694,7 @@
                             <div class="form-group col-sm-6">
                               <label>Age:</label>
                               <input
+                                name="age"
                                 type="text"
                                 class="form-control"
                                 id="age"
@@ -681,6 +707,7 @@
                                 name="address"
                                 rows="5"
                                 style="line-height: 22px"
+                                required
                               ></textarea>
                             </div>
                           </div>
@@ -703,11 +730,15 @@
                         </div>
                       </div>
                       <div class="card-body">
-                        <form>
+                        <form
+                          id="changePassword"
+                          action="/user-profile-edit"
+                          method="post"
+                        >
                           <div class="form-group">
                             <label for="cpass">Current Password:</label>
                             <a href="/forgot-password" class="float-right"
-                              >Forgot Password</a
+                              >Forgot Password?</a
                             >
                             <input
                               type="Password"
